@@ -1,0 +1,6 @@
+framework module Pods_SGRoutePlan_Example {
+  umbrella header "Pods-SGRoutePlan_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

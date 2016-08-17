@@ -22,7 +22,7 @@ pod "SGRoutePlan"
 
 ## Author
 
-吴小星, xiaoxing.wu@southgis.com
+吴小星, crash_wu@163.com
 
 ## License
 

@@ -1,0 +1,6 @@
+framework module SGRoutePlan {
+  umbrella header "SGRoutePlan-umbrella.h"
+
+  export *
+  module * { export * }
+}

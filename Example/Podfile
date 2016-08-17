@@ -1,11 +1,9 @@
 use_frameworks!
 
+pod 'ObjectMapper'
+
 target 'SGRoutePlan_Example' do
-  pod 'SGRoutePlan', :path => '../'
+  pod 'SGRoutePlan', :path => '../SGRoutePlan.podspec'
 
-  target 'SGRoutePlan_Tests' do
-    inherit! :search_paths
 
-    
-  end
 end

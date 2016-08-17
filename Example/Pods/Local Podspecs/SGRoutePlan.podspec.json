@@ -1,0 +1,22 @@
+{
+  "name": "SGRoutePlan",
+  "version": "0.1.0",
+  "summary": "A short description of SGRoutePlan.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/SGRoutePlan",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "吴小星": "xiaoxing.wu@southgis.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/SGRoutePlan.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "SGRoutePlan/Classes/**/*"
+}
