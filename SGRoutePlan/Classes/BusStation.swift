@@ -30,10 +30,12 @@ public class BusStation: NSObject ,Mappable{
      */
     public var name   :String?
     
+    public override init() {
+        super.init()
+    }
     
-    
-    required public init?(_ map: Map) {
-  
+    required public convenience init?(_ map: Map) {
+        self.init()
     }
     
     public func mapping(map: Map) {

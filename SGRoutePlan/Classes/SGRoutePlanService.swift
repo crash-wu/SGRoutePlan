@@ -24,7 +24,7 @@ public class SGRoutePlanService: NSObject {
 
     
     /// 单例
-    public static let shareManager = SGRoutePlanService()
+    public static let sharedInstance = SGRoutePlanService()
     
     /**
      拼接请求URL
@@ -56,16 +56,32 @@ public class SGRoutePlanService: NSObject {
         
         if let requestJson = Mapper().toJSONString(keyword){
             
-            let url :NSURL = NSURL(string:getSearceURl(.Query, postStr: requestJson) )!
+            let urlString = getSearceURl(.Query, postStr: requestJson.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)
+            print("urlString:\(urlString)")
+            
+            
+            var url = NSURL()
+            
+            if  let urlTemp  = NSURL(string:urlString){
+                
+                url = urlTemp
+            }
+
             
             NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: {[weak self] (data, response, error) in
                 
                 self?.responseDataProcess(data, response: response, error: error, success: { (json) in
+                    guard let strongSelf = self else{return }
                     
-                    
-                    
+                        if   let pois = Mapper<TdtPOIResult>().mapArray(json){
+                            success(pois)
+                            
+                        }else{
+                            fail(nil)
+                        }                    
                     }, fail: { (error) in
                         
+                        fail(error)
                 })
                 
             }).resume()
@@ -94,8 +110,7 @@ public class SGRoutePlanService: NSObject {
         }
         
         var json = [NSObject :AnyObject]()
-        
-//        Mapper<TdtPOIResult>().map(<#T##JSON: AnyObject?##AnyObject?#>)
+
         
         if let dataTemp = data{
             if dataTemp is NSData{

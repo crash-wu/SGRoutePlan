@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "9DF5210F18A1FB2BBA932623DBE5284CF6256D5B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "9DF5210F18A1FB2BBA932623DBE5284CF6256D5B" : 0,
+    "FD37C0232FBE284E64E80AB1FCF6FA0B966135BD" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2ECF6700-7A7F-4AA5-9E42-59349A8BFAAD",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "9DF5210F18A1FB2BBA932623DBE5284CF6256D5B" : "SGRoutePlan\/",
+    "FD37C0232FBE284E64E80AB1FCF6FA0B966135BD" : "SGRoutePlan\/Example\/SGRoutePlan\/SouthgisTileLayer\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SGRoutePlan",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Example\/SGRoutePlan.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/crash-wu\/SGRoutePlan.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9DF5210F18A1FB2BBA932623DBE5284CF6256D5B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/linkLind\/SouthgisTileLayer.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FD37C0232FBE284E64E80AB1FCF6FA0B966135BD"
+    }
+  ]
+}

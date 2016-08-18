@@ -44,9 +44,12 @@ public class BusSegment: NSObject ,Mappable{
      */
     public var segmentLine: [BusSegmentLine]?
     
+    public override init() {
+        super.init()
+    }
     
-    required public init?(_ map: Map) {
-
+    required public convenience init?(_ map: Map) {
+        self.init()
     }
     
     public func mapping(map: Map) {

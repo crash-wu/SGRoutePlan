@@ -39,9 +39,12 @@ public class BusLineSearch: NSObject ,Mappable{
      */
     public var linetype      :BusLineSearchType?
     
+    public override init() {
+        super.init()
+    }
     
-    required public init?(_ map: Map) {
-        
+    required public convenience init?(_ map: Map) {
+        self.init()
     }
     
     public func mapping(map: Map) {

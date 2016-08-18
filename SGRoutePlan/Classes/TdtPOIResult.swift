@@ -54,7 +54,7 @@ public class TdtPOIResult: NSObject ,Mappable {
      */
     public var distance :String?
     
-    override init() {
+   public override init() {
         super.init()
     }
     

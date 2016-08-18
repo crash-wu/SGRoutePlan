@@ -1,6 +1,6 @@
 use_frameworks!
 
-pod 'ObjectMapper'
+#pod 'ObjectMapper'
 
 target 'SGRoutePlan_Example' do
   pod 'SGRoutePlan', :path => '../SGRoutePlan.podspec'

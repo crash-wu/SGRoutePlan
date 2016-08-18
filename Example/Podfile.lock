@@ -1,9 +1,9 @@
 PODS:
   - ObjectMapper (1.4.0)
-  - SGRoutePlan (0.1.0)
+  - SGRoutePlan (0.1.0):
+    - ObjectMapper
 
 DEPENDENCIES:
-  - ObjectMapper
   - SGRoutePlan (from `../SGRoutePlan.podspec`)
 
 EXTERNAL SOURCES:
@@ -12,6 +12,6 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   ObjectMapper: a07ad0462c5adf014adc0f89ef04c29b626e855e
-  SGRoutePlan: c78e2c1b32f2926962c9db66c39f6c8682316866
+  SGRoutePlan: 8aca1f1f7b5c1602b1822573078f426674c73be4
 
 COCOAPODS: 0.39.0

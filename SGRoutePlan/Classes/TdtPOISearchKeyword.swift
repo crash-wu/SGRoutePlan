@@ -78,7 +78,7 @@ public class TdtPOISearchKeyword: NSObject ,Mappable{
     /**
      初始化函数
      */
-    override init() {
+   public override init() {
         super.init()
         self.count = 10
         self.start = 0

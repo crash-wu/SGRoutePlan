@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/SGRoutePlan'
+  s.homepage         = 'https://github.com/crash-wu/SGRoutePlan'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '吴小星' => 'xiaoxing.wu@southgis.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/SGRoutePlan.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/crash-wu/SGRoutePlan.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
@@ -39,5 +39,15 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
-#s.dependecy 'ObjectMapper'
+    s.dependency 'ObjectMapper'
+
+    s.xcconfig = {
+
+        "FRAMEWORK_SEARCH_PATHS" => "$(HOME)/Library/SDKs/ArcGIS/iOS" ,
+        "OTHER_LDFLAGS"  => '-lObjC -framework ArcGIS -l c++',
+
+        'ENABLE_BITCODE' => 'NO',
+        'CLANG_ENABLE_MODULES' => 'YES'
+
+    }
 end

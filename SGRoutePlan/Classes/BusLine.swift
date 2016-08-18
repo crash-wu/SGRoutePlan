@@ -33,7 +33,7 @@ public class BusLine: NSObject ,Mappable {
     public var segments: [BusSegment]?
     
     
-    override init() {
+   public  override init() {
         super.init()
     }
     
