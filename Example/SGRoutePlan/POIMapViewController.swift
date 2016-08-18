@@ -14,6 +14,7 @@ class POIMapViewController: UIViewController {
     
     var mapView :AGSMapView!
     var searchBtn: UIButton!
+    var busBtn   : UIButton!
     var poiKey = TdtPOISearchKeyword()
     
     init(){
@@ -28,6 +29,8 @@ class POIMapViewController: UIViewController {
         self.searchBtn.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         self.searchBtn.backgroundColor = UIColor.blueColor()
         self.searchBtn.addTarget(self, action: #selector(POIMapViewController.search(_:)), forControlEvents: .TouchUpInside)
+        
+        
         
         self.edgesForExtendedLayout = .None
         self.automaticallyAdjustsScrollViewInsets = false
@@ -66,8 +69,7 @@ class POIMapViewController: UIViewController {
         poiKey.level = 14
         
         SGRoutePlanService.sharedInstance.poiSearch(poiKey, success: {[weak self] (poi) in
-            
-                print("pois:\(poi)")
+
                 SGRouteUtils.sharedInstance.showPOIResultsLayer(poi, mapView: (self?.mapView)!, pinImageName: "list_numb_img")
             
             }) { (error) in

@@ -64,7 +64,6 @@ public class SGRoutePlanService: NSObject {
                 url = urlTemp
             }
 
-            
             NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: {[weak self] (data, response, error) in
                 
                 self?.responseDataProcess(data, response: response, error: error, success: { (json) in
@@ -126,7 +125,7 @@ public class SGRoutePlanService: NSObject {
                         return
                     }
                 }catch{
-                    
+                    fail(nil)
                 }
             }
         }
