@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '4A40284944EB2E10B3C4D4EC'
+               BlueprintIdentifier = 'A30C1EF0EC5FC03E2D15F745'
                BlueprintName = 'SGRoutePlan'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'SGRoutePlan.framework'>
