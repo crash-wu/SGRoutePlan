@@ -44,7 +44,7 @@ public class TdtPOISearchKeyword: NSObject ,Mappable{
      *
      *  @brief  搜索类型
      */
-    public var queryType    :QueryType? = .GeneralType
+    public var queryType    :QueryType? 
     
     
     /**
@@ -96,7 +96,7 @@ public class TdtPOISearchKeyword: NSObject ,Mappable{
         self.keyWord        <- map["keyWord"]
         self.mapBound       <- map["mapBound"]
         self.level          <- map["level"]
-        self.queryType      <- map["queryRadius"]
+        self.queryType      <- map["queryType"]
         self.pointLonlat    <- map["pointLonlat"]
         self.queryRadius    <- map["queryRadius"]
     }

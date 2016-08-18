@@ -65,9 +65,10 @@ class POIMapViewController: UIViewController {
         poiKey.mapBound = SGRouteUtils.sharedInstance.getMapBound(self.mapView)
         poiKey.level = 14
         
-        SGRoutePlanService.sharedInstance.poiSearch(poiKey, success: { (poi) in
+        SGRoutePlanService.sharedInstance.poiSearch(poiKey, success: {[weak self] (poi) in
             
                 print("pois:\(poi)")
+                SGRouteUtils.sharedInstance.showPOIResultsLayer(poi, mapView: (self?.mapView)!, pinImageName: "list_numb_img")
             
             }) { (error) in
                 

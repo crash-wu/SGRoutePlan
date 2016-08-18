@@ -57,9 +57,6 @@ public class SGRoutePlanService: NSObject {
         if let requestJson = Mapper().toJSONString(keyword){
             
             let urlString = getSearceURl(.Query, postStr: requestJson.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)
-            print("urlString:\(urlString)")
-            
-            
             var url = NSURL()
             
             if  let urlTemp  = NSURL(string:urlString){
@@ -73,12 +70,16 @@ public class SGRoutePlanService: NSObject {
                 self?.responseDataProcess(data, response: response, error: error, success: { (json) in
                     guard let strongSelf = self else{return }
                     
-                        if   let pois = Mapper<TdtPOIResult>().mapArray(json){
-                            success(pois)
+                        if let poiJson = json["pois"]{
                             
-                        }else{
-                            fail(nil)
-                        }                    
+                            if let pois = Mapper<TdtPOIResult>().mapArray(poiJson){
+                                success(pois)
+                                return
+                            }
+                        }
+                        //如果没有数据,则返回失败标识
+                        fail(nil)
+                    
                     }, fail: { (error) in
                         
                         fail(error)
@@ -94,7 +95,9 @@ public class SGRoutePlanService: NSObject {
     
     }
     
-    
+    /**
+     解析请求返回数据
+     */
     private func responseDataProcess(data: NSData?, response :NSURLResponse?, error :NSError? ,success :([NSObject :AnyObject])->Void,fail:(NSError?)->Void){
         
         if (error != nil) {

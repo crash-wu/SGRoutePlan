@@ -10,39 +10,7 @@ import Foundation
 import ArcGIS
 
 extension AGSPoint {
-    /**
-     转换坐标点的空间参考坐标系
-     
-     - parameter wkid: 坐标系ID
-     
-     常用坐标系：
-     WGS84: 4326
-     
-     - returns: 转换后的坐标点
-     */
-    func projectToSpatialReferenceWithWKID(WKID: UInt) -> AGSPoint? {
-        let src = AGSSpatialReference(WKID: WKID)
-        return projectToSpatialReference(src)
-    }
-    
-    
-    func projectToSpatialReference(sr: AGSSpatialReference) -> AGSPoint? {
-        let geoEng = AGSGeometryEngine.defaultGeometryEngine()
-        return geoEng.projectGeometry(self, toSpatialReference: sr) as? AGSPoint
-    }
-    
-    // 将坐标点投影到WebMercator坐标系 102100
-    func projectToWebMercator() -> AGSPoint? {
-        return projectToSpatialReference(AGSSpatialReference.webMercatorSpatialReference())
-    }
-    
-    class func fromJSONString(jsonString str: String) -> AGSPoint? {
-        guard let json = str.SGtoJSONObject() as? [NSObject: AnyObject] else {
-            return nil
-        }
-        
-        return AGSPoint(JSON: json)
-    }
+
     
     /**
      国标2000坐标系转web墨卡托坐标

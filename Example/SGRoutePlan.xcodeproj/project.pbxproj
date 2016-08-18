@@ -37,6 +37,8 @@
 		988A81F21D659050001BDE41 /* SouthgisTdtType.m in Sources */ = {isa = PBXBuildFile; fileRef = 988A81D91D659050001BDE41 /* SouthgisTdtType.m */; };
 		988A81F41D659050001BDE41 /* SouthgisTianDiTuWMTSLayerInfoDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 988A81DD1D659050001BDE41 /* SouthgisTianDiTuWMTSLayerInfoDelegate.m */; };
 		988A81F51D659050001BDE41 /* SGSTdtWMSLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988A81DF1D659050001BDE41 /* SGSTdtWMSLayer.swift */; };
+		98C60E661D65BD5B0084CDA4 /* list_numb_img.png in Resources */ = {isa = PBXBuildFile; fileRef = 98C60E641D65BD5B0084CDA4 /* list_numb_img.png */; };
+		98C60E671D65BD5B0084CDA4 /* list_numb_img@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 98C60E651D65BD5B0084CDA4 /* list_numb_img@2x.png */; };
 		DB3D21C0DE2624ED9CE1A8D5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68BACFE452E50D691CAE9A82 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +109,8 @@
 		988A81DC1D659050001BDE41 /* SouthgisTianDiTuWMTSLayerInfoDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SouthgisTianDiTuWMTSLayerInfoDelegate.h; sourceTree = "<group>"; };
 		988A81DD1D659050001BDE41 /* SouthgisTianDiTuWMTSLayerInfoDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SouthgisTianDiTuWMTSLayerInfoDelegate.m; sourceTree = "<group>"; };
 		988A81DF1D659050001BDE41 /* SGSTdtWMSLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGSTdtWMSLayer.swift; sourceTree = "<group>"; };
+		98C60E641D65BD5B0084CDA4 /* list_numb_img.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list_numb_img.png; sourceTree = "<group>"; };
+		98C60E651D65BD5B0084CDA4 /* list_numb_img@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list_numb_img@2x.png"; sourceTree = "<group>"; };
 		99FF3A5E504B41038F7FB422 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		D6DCE82D40849D1F22A8F0E0 /* Pods_SGRoutePlan_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SGRoutePlan_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9E69844B30330353C9EEC7E /* SGRoutePlan.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SGRoutePlan.podspec; path = ../SGRoutePlan.podspec; sourceTree = "<group>"; };
@@ -157,6 +161,8 @@
 		607FACD21AFB9204008FA782 /* Example for SGRoutePlan */ = {
 			isa = PBXGroup;
 			children = (
+				98C60E641D65BD5B0084CDA4 /* list_numb_img.png */,
+				98C60E651D65BD5B0084CDA4 /* list_numb_img@2x.png */,
 				988A81B01D659050001BDE41 /* SouthgisTileLayer */,
 				988A81AF1D658ED5001BDE41 /* SGRoutePlan_Example-Bridging-Header.h */,
 				988A80FD1D654DCB001BDE41 /* AGSMapUtils.swift */,
@@ -397,8 +403,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				98C60E661D65BD5B0084CDA4 /* list_numb_img.png in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				98C60E671D65BD5B0084CDA4 /* list_numb_img@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
