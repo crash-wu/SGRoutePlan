@@ -22,6 +22,9 @@
   "dependencies": {
     "ObjectMapper": [
 
+    ],
+    "SWXMLHash": [
+
     ]
   },
   "xcconfig": {

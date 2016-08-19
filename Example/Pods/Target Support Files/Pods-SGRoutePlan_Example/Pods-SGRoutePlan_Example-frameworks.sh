@@ -88,10 +88,12 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-SGRoutePlan_Example/SnapKit.framework"
   install_framework "Pods-SGRoutePlan_Example/ObjectMapper.framework"
   install_framework "Pods-SGRoutePlan_Example/SGRoutePlan.framework"
+  install_framework "Pods-SGRoutePlan_Example/SWXMLHash.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-SGRoutePlan_Example/SCMultipleTableView.framework"
   install_framework "Pods-SGRoutePlan_Example/SnapKit.framework"
   install_framework "Pods-SGRoutePlan_Example/ObjectMapper.framework"
   install_framework "Pods-SGRoutePlan_Example/SGRoutePlan.framework"
+  install_framework "Pods-SGRoutePlan_Example/SWXMLHash.framework"
 fi

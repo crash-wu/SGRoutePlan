@@ -15,6 +15,9 @@ class POIMapViewController: UIViewController {
     var mapView :AGSMapView!
     var searchBtn: UIButton!
     var busBtn   : UIButton!
+    var carBtn   :UIButton!
+    
+    var clearBtn : UIButton!
     //POI 搜索实体
     var poiKey = TdtPOISearchKeyword()
     
@@ -41,6 +44,23 @@ class POIMapViewController: UIViewController {
         self.busBtn.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         self.busBtn.backgroundColor = UIColor.blueColor()
         self.busBtn.addTarget(self, action: #selector(POIMapViewController.busSearch(_:)), forControlEvents: .TouchUpInside)
+        
+        self.carBtn = UIButton(type: .Custom)
+        self.view.insertSubview(self.carBtn, aboveSubview: self.mapView)
+        self.carBtn.frame = CGRectMake(200, 0, 100, 40)
+        self.carBtn.setTitle("驾车搜索", forState: .Normal)
+        self.carBtn.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        self.carBtn.backgroundColor = UIColor.blueColor()
+        self.carBtn.addTarget(self, action: #selector(POIMapViewController.carSearch(_:)), forControlEvents: .TouchUpInside)
+        
+        self.clearBtn = UIButton(type: .Custom)
+        self.view.insertSubview(self.clearBtn, aboveSubview: self.mapView)
+        self.clearBtn.frame = CGRectMake(300, 0, 100, 40)
+        self.clearBtn.setTitle("清除搜索", forState: .Normal)
+        self.clearBtn.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        self.clearBtn.backgroundColor = UIColor.blueColor()
+        self.clearBtn.addTarget(self, action: #selector(POIMapViewController.clear(_:)), forControlEvents: .TouchUpInside)
+        
         
         self.edgesForExtendedLayout = .None
         self.automaticallyAdjustsScrollViewInsets = false
@@ -116,6 +136,16 @@ class POIMapViewController: UIViewController {
         }
         
         
+    }
+    
+    
+    @objc private func carSearch(button:UIButton){
+        
+    }
+    
+    @objc private func clear(button:UIButton){
+        
+        SGRouteUtils.sharedInstance.clearPOIResultLayer(self.mapView)
     }
 
 }

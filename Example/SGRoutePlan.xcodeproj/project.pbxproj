@@ -1,797 +1,2230 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
-		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
-		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		7614E377686DAC1E349C3E52 /* Pods_SGRoutePlan_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DCE82D40849D1F22A8F0E0 /* Pods_SGRoutePlan_Example.framework */; };
-		9831DDBF1D66A0AA0035D8F0 /* BusLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9831DDBA1D66A0AA0035D8F0 /* BusLineCell.swift */; };
-		9831DDC01D66A0AA0035D8F0 /* BusLineResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9831DDBB1D66A0AA0035D8F0 /* BusLineResultView.swift */; };
-		9831DDC11D66A0AA0035D8F0 /* BusLineResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9831DDBC1D66A0AA0035D8F0 /* BusLineResultViewController.swift */; };
-		9831DDC21D66A0AA0035D8F0 /* BusLineSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9831DDBD1D66A0AA0035D8F0 /* BusLineSectionView.swift */; };
-		9831DDC31D66A0AA0035D8F0 /* BusLineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9831DDBE1D66A0AA0035D8F0 /* BusLineViewModel.swift */; };
-		9831DDC51D66A1210035D8F0 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9831DDC41D66A1210035D8F0 /* UIColor+Ext.swift */; };
-		9831DDCA1D66AE7C0035D8F0 /* 路线规划-步行@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9831DDC71D66AE7C0035D8F0 /* 路线规划-步行@2x.png */; };
-		9831DDCB1D66AE7C0035D8F0 /* 路线规划-地铁@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9831DDC81D66AE7C0035D8F0 /* 路线规划-地铁@2x.png */; };
-		9831DDCC1D66AE7C0035D8F0 /* 路线规划-公交@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9831DDC91D66AE7C0035D8F0 /* 路线规划-公交@2x.png */; };
-		9831DDCF1D66B8FF0035D8F0 /* end_popo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9831DDCD1D66B8FF0035D8F0 /* end_popo@2x.png */; };
-		9831DDD01D66B8FF0035D8F0 /* start_popo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9831DDCE1D66B8FF0035D8F0 /* start_popo@2x.png */; };
-		988A80A31D6540FE001BDE41 /* RoutePlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988A80A21D6540FE001BDE41 /* RoutePlanViewController.swift */; };
-		988A80A91D6549E4001BDE41 /* POIMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988A80A81D6549E4001BDE41 /* POIMapViewController.swift */; };
-		988A80FF1D654DCB001BDE41 /* AGSMapUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988A80FD1D654DCB001BDE41 /* AGSMapUtils.swift */; };
-		988A81E01D659050001BDE41 /* Southgis_BdWMTSLayerInfoDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 988A81B31D659050001BDE41 /* Southgis_BdWMTSLayerInfoDelegate.m */; };
-		988A81E11D659050001BDE41 /* Southgis_BdWMTSLayerOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 988A81B51D659050001BDE41 /* Southgis_BdWMTSLayerOperation.m */; };
-		988A81E21D659050001BDE41 /* SouthgisBdWMTSLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 988A81B71D659050001BDE41 /* SouthgisBdWMTSLayer.m */; };
-		988A81E31D659050001BDE41 /* Southgis_TiledServiceLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 988A81BA1D659050001BDE41 /* Southgis_TiledServiceLayer.m */; };
-		988A81E41D659050001BDE41 /* Southgis_TiledServiceLayerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 988A81BC1D659050001BDE41 /* Southgis_TiledServiceLayerInfo.m */; };
-		988A81E51D659050001BDE41 /* Southgis_TiledServiceLayerInfoOperation+OfflineTiledInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 988A81BE1D659050001BDE41 /* Southgis_TiledServiceLayerInfoOperation+OfflineTiledInfo.m */; };
-		988A81E61D659050001BDE41 /* Southgis_TiledServiceLayerInfoOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 988A81C01D659050001BDE41 /* Southgis_TiledServiceLayerInfoOperation.m */; };
-		988A81E71D659050001BDE41 /* Southigs_TiledServiceLayerOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 988A81C21D659050001BDE41 /* Southigs_TiledServiceLayerOperation.m */; };
-		988A81E81D659050001BDE41 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 988A81C31D659050001BDE41 /* README.md */; };
-		988A81E91D659050001BDE41 /* NSDictionary+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 988A81C61D659050001BDE41 /* NSDictionary+YYAdd.m */; };
-		988A81EA1D659050001BDE41 /* SGSWMTSInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 988A81C81D659050001BDE41 /* SGSWMTSInfo.m */; };
-		988A81EB1D659050001BDE41 /* SGSWMTSLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 988A81CA1D659050001BDE41 /* SGSWMTSLayer.m */; };
-		988A81EC1D659050001BDE41 /* SGSWMTSLayerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 988A81CC1D659050001BDE41 /* SGSWMTSLayerInfo.m */; };
-		988A81ED1D659050001BDE41 /* SouthgisBaseTiledServiceLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 988A81CE1D659050001BDE41 /* SouthgisBaseTiledServiceLayer.m */; };
-		988A81EE1D659050001BDE41 /* SouthgisTiledMapHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 988A81D01D659050001BDE41 /* SouthgisTiledMapHelper.m */; };
-		988A81EF1D659050001BDE41 /* Southgis_WMTSLayerOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 988A81D31D659050001BDE41 /* Southgis_WMTSLayerOperation.m */; };
-		988A81F01D659050001BDE41 /* SouthgisTdt_LayerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 988A81D51D659050001BDE41 /* SouthgisTdt_LayerInfo.m */; };
-		988A81F11D659050001BDE41 /* SouthgisTdt_TileLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 988A81D71D659050001BDE41 /* SouthgisTdt_TileLayer.m */; };
-		988A81F21D659050001BDE41 /* SouthgisTdtType.m in Sources */ = {isa = PBXBuildFile; fileRef = 988A81D91D659050001BDE41 /* SouthgisTdtType.m */; };
-		988A81F41D659050001BDE41 /* SouthgisTianDiTuWMTSLayerInfoDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 988A81DD1D659050001BDE41 /* SouthgisTianDiTuWMTSLayerInfoDelegate.m */; };
-		988A81F51D659050001BDE41 /* SGSTdtWMSLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988A81DF1D659050001BDE41 /* SGSTdtWMSLayer.swift */; };
-		98C60E661D65BD5B0084CDA4 /* list_numb_img.png in Resources */ = {isa = PBXBuildFile; fileRef = 98C60E641D65BD5B0084CDA4 /* list_numb_img.png */; };
-		98C60E671D65BD5B0084CDA4 /* list_numb_img@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 98C60E651D65BD5B0084CDA4 /* list_numb_img@2x.png */; };
-		DB3D21C0DE2624ED9CE1A8D5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68BACFE452E50D691CAE9A82 /* Pods.framework */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		607FACE61AFB9204008FA782 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 607FACCF1AFB9204008FA782;
-			remoteInfo = SGRoutePlan;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		1C7129B4EA5697C3391095AE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		607FACD01AFB9204008FA782 /* SGRoutePlan_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SGRoutePlan_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		607FACE51AFB9204008FA782 /* SGRoutePlan_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SGRoutePlan_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		68BACFE452E50D691CAE9A82 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		95CBD148D159D021D0996CFA /* Pods-SGRoutePlan_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGRoutePlan_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SGRoutePlan_Example/Pods-SGRoutePlan_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		9831DDBA1D66A0AA0035D8F0 /* BusLineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusLineCell.swift; sourceTree = "<group>"; };
-		9831DDBB1D66A0AA0035D8F0 /* BusLineResultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusLineResultView.swift; sourceTree = "<group>"; };
-		9831DDBC1D66A0AA0035D8F0 /* BusLineResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusLineResultViewController.swift; sourceTree = "<group>"; };
-		9831DDBD1D66A0AA0035D8F0 /* BusLineSectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusLineSectionView.swift; sourceTree = "<group>"; };
-		9831DDBE1D66A0AA0035D8F0 /* BusLineViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusLineViewModel.swift; sourceTree = "<group>"; };
-		9831DDC41D66A1210035D8F0 /* UIColor+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
-		9831DDC71D66AE7C0035D8F0 /* 路线规划-步行@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "路线规划-步行@2x.png"; sourceTree = "<group>"; };
-		9831DDC81D66AE7C0035D8F0 /* 路线规划-地铁@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "路线规划-地铁@2x.png"; sourceTree = "<group>"; };
-		9831DDC91D66AE7C0035D8F0 /* 路线规划-公交@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "路线规划-公交@2x.png"; sourceTree = "<group>"; };
-		9831DDCD1D66B8FF0035D8F0 /* end_popo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "end_popo@2x.png"; sourceTree = "<group>"; };
-		9831DDCE1D66B8FF0035D8F0 /* start_popo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "start_popo@2x.png"; sourceTree = "<group>"; };
-		988A80A21D6540FE001BDE41 /* RoutePlanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutePlanViewController.swift; sourceTree = "<group>"; };
-		988A80A81D6549E4001BDE41 /* POIMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POIMapViewController.swift; sourceTree = "<group>"; };
-		988A80FD1D654DCB001BDE41 /* AGSMapUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGSMapUtils.swift; sourceTree = "<group>"; };
-		988A81AF1D658ED5001BDE41 /* SGRoutePlan_Example-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SGRoutePlan_Example-Bridging-Header.h"; sourceTree = "<group>"; };
-		988A81B21D659050001BDE41 /* Southgis_BdWMTSLayerInfoDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Southgis_BdWMTSLayerInfoDelegate.h; sourceTree = "<group>"; };
-		988A81B31D659050001BDE41 /* Southgis_BdWMTSLayerInfoDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Southgis_BdWMTSLayerInfoDelegate.m; sourceTree = "<group>"; };
-		988A81B41D659050001BDE41 /* Southgis_BdWMTSLayerOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Southgis_BdWMTSLayerOperation.h; sourceTree = "<group>"; };
-		988A81B51D659050001BDE41 /* Southgis_BdWMTSLayerOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Southgis_BdWMTSLayerOperation.m; sourceTree = "<group>"; };
-		988A81B61D659050001BDE41 /* SouthgisBdWMTSLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SouthgisBdWMTSLayer.h; sourceTree = "<group>"; };
-		988A81B71D659050001BDE41 /* SouthgisBdWMTSLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SouthgisBdWMTSLayer.m; sourceTree = "<group>"; };
-		988A81B91D659050001BDE41 /* Southgis_TiledServiceLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Southgis_TiledServiceLayer.h; sourceTree = "<group>"; };
-		988A81BA1D659050001BDE41 /* Southgis_TiledServiceLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Southgis_TiledServiceLayer.m; sourceTree = "<group>"; };
-		988A81BB1D659050001BDE41 /* Southgis_TiledServiceLayerInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Southgis_TiledServiceLayerInfo.h; sourceTree = "<group>"; };
-		988A81BC1D659050001BDE41 /* Southgis_TiledServiceLayerInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Southgis_TiledServiceLayerInfo.m; sourceTree = "<group>"; };
-		988A81BD1D659050001BDE41 /* Southgis_TiledServiceLayerInfoOperation+OfflineTiledInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Southgis_TiledServiceLayerInfoOperation+OfflineTiledInfo.h"; sourceTree = "<group>"; };
-		988A81BE1D659050001BDE41 /* Southgis_TiledServiceLayerInfoOperation+OfflineTiledInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Southgis_TiledServiceLayerInfoOperation+OfflineTiledInfo.m"; sourceTree = "<group>"; };
-		988A81BF1D659050001BDE41 /* Southgis_TiledServiceLayerInfoOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Southgis_TiledServiceLayerInfoOperation.h; sourceTree = "<group>"; };
-		988A81C01D659050001BDE41 /* Southgis_TiledServiceLayerInfoOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Southgis_TiledServiceLayerInfoOperation.m; sourceTree = "<group>"; };
-		988A81C11D659050001BDE41 /* Southigs_TiledServiceLayerOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Southigs_TiledServiceLayerOperation.h; sourceTree = "<group>"; };
-		988A81C21D659050001BDE41 /* Southigs_TiledServiceLayerOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Southigs_TiledServiceLayerOperation.m; sourceTree = "<group>"; };
-		988A81C31D659050001BDE41 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		988A81C51D659050001BDE41 /* NSDictionary+YYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+YYAdd.h"; sourceTree = "<group>"; };
-		988A81C61D659050001BDE41 /* NSDictionary+YYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+YYAdd.m"; sourceTree = "<group>"; };
-		988A81C71D659050001BDE41 /* SGSWMTSInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGSWMTSInfo.h; sourceTree = "<group>"; };
-		988A81C81D659050001BDE41 /* SGSWMTSInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGSWMTSInfo.m; sourceTree = "<group>"; };
-		988A81C91D659050001BDE41 /* SGSWMTSLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGSWMTSLayer.h; sourceTree = "<group>"; };
-		988A81CA1D659050001BDE41 /* SGSWMTSLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGSWMTSLayer.m; sourceTree = "<group>"; };
-		988A81CB1D659050001BDE41 /* SGSWMTSLayerInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGSWMTSLayerInfo.h; sourceTree = "<group>"; };
-		988A81CC1D659050001BDE41 /* SGSWMTSLayerInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGSWMTSLayerInfo.m; sourceTree = "<group>"; };
-		988A81CD1D659050001BDE41 /* SouthgisBaseTiledServiceLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SouthgisBaseTiledServiceLayer.h; sourceTree = "<group>"; };
-		988A81CE1D659050001BDE41 /* SouthgisBaseTiledServiceLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SouthgisBaseTiledServiceLayer.m; sourceTree = "<group>"; };
-		988A81CF1D659050001BDE41 /* SouthgisTiledMapHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SouthgisTiledMapHelper.h; sourceTree = "<group>"; };
-		988A81D01D659050001BDE41 /* SouthgisTiledMapHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SouthgisTiledMapHelper.m; sourceTree = "<group>"; };
-		988A81D21D659050001BDE41 /* Southgis_WMTSLayerOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Southgis_WMTSLayerOperation.h; sourceTree = "<group>"; };
-		988A81D31D659050001BDE41 /* Southgis_WMTSLayerOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Southgis_WMTSLayerOperation.m; sourceTree = "<group>"; };
-		988A81D41D659050001BDE41 /* SouthgisTdt_LayerInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SouthgisTdt_LayerInfo.h; sourceTree = "<group>"; };
-		988A81D51D659050001BDE41 /* SouthgisTdt_LayerInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SouthgisTdt_LayerInfo.m; sourceTree = "<group>"; };
-		988A81D61D659050001BDE41 /* SouthgisTdt_TileLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SouthgisTdt_TileLayer.h; sourceTree = "<group>"; };
-		988A81D71D659050001BDE41 /* SouthgisTdt_TileLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SouthgisTdt_TileLayer.m; sourceTree = "<group>"; };
-		988A81D81D659050001BDE41 /* SouthgisTdtType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SouthgisTdtType.h; sourceTree = "<group>"; };
-		988A81D91D659050001BDE41 /* SouthgisTdtType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SouthgisTdtType.m; sourceTree = "<group>"; };
-		988A81DC1D659050001BDE41 /* SouthgisTianDiTuWMTSLayerInfoDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SouthgisTianDiTuWMTSLayerInfoDelegate.h; sourceTree = "<group>"; };
-		988A81DD1D659050001BDE41 /* SouthgisTianDiTuWMTSLayerInfoDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SouthgisTianDiTuWMTSLayerInfoDelegate.m; sourceTree = "<group>"; };
-		988A81DF1D659050001BDE41 /* SGSTdtWMSLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGSTdtWMSLayer.swift; sourceTree = "<group>"; };
-		98C60E641D65BD5B0084CDA4 /* list_numb_img.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list_numb_img.png; sourceTree = "<group>"; };
-		98C60E651D65BD5B0084CDA4 /* list_numb_img@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list_numb_img@2x.png"; sourceTree = "<group>"; };
-		99FF3A5E504B41038F7FB422 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		D6DCE82D40849D1F22A8F0E0 /* Pods_SGRoutePlan_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SGRoutePlan_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D9E69844B30330353C9EEC7E /* SGRoutePlan.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SGRoutePlan.podspec; path = ../SGRoutePlan.podspec; sourceTree = "<group>"; };
-		FC43576F2C6DE6050DF4E522 /* Pods-SGRoutePlan_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGRoutePlan_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SGRoutePlan_Example/Pods-SGRoutePlan_Example.release.xcconfig"; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		607FACCD1AFB9204008FA782 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7614E377686DAC1E349C3E52 /* Pods_SGRoutePlan_Example.framework in Frameworks */,
-				DB3D21C0DE2624ED9CE1A8D5 /* Pods.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		607FACE21AFB9204008FA782 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		607FACC71AFB9204008FA782 = {
-			isa = PBXGroup;
-			children = (
-				607FACF51AFB993E008FA782 /* Podspec Metadata */,
-				607FACD21AFB9204008FA782 /* Example for SGRoutePlan */,
-				607FACE81AFB9204008FA782 /* Tests */,
-				607FACD11AFB9204008FA782 /* Products */,
-				EE23A32DCE652305728DAE86 /* Pods */,
-				D406E71DD6F520B6ACF7821F /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		607FACD11AFB9204008FA782 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				607FACD01AFB9204008FA782 /* SGRoutePlan_Example.app */,
-				607FACE51AFB9204008FA782 /* SGRoutePlan_Tests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		607FACD21AFB9204008FA782 /* Example for SGRoutePlan */ = {
-			isa = PBXGroup;
-			children = (
-				9831DDC61D66A53D0035D8F0 /* Bus */,
-				98C60E641D65BD5B0084CDA4 /* list_numb_img.png */,
-				98C60E651D65BD5B0084CDA4 /* list_numb_img@2x.png */,
-				988A81B01D659050001BDE41 /* SouthgisTileLayer */,
-				988A81AF1D658ED5001BDE41 /* SGRoutePlan_Example-Bridging-Header.h */,
-				988A80FD1D654DCB001BDE41 /* AGSMapUtils.swift */,
-				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
-				607FACDC1AFB9204008FA782 /* Images.xcassets */,
-				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
-				607FACD31AFB9204008FA782 /* Supporting Files */,
-				988A80A21D6540FE001BDE41 /* RoutePlanViewController.swift */,
-				988A80A81D6549E4001BDE41 /* POIMapViewController.swift */,
-				9831DDC41D66A1210035D8F0 /* UIColor+Ext.swift */,
-			);
-			name = "Example for SGRoutePlan";
-			path = SGRoutePlan;
-			sourceTree = "<group>";
-		};
-		607FACD31AFB9204008FA782 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				607FACD41AFB9204008FA782 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		607FACE81AFB9204008FA782 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
-				607FACE91AFB9204008FA782 /* Supporting Files */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		607FACE91AFB9204008FA782 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				607FACEA1AFB9204008FA782 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
-			isa = PBXGroup;
-			children = (
-				D9E69844B30330353C9EEC7E /* SGRoutePlan.podspec */,
-				99FF3A5E504B41038F7FB422 /* README.md */,
-				1C7129B4EA5697C3391095AE /* LICENSE */,
-			);
-			name = "Podspec Metadata";
-			sourceTree = "<group>";
-		};
-		9831DDC61D66A53D0035D8F0 /* Bus */ = {
-			isa = PBXGroup;
-			children = (
-				9831DDCD1D66B8FF0035D8F0 /* end_popo@2x.png */,
-				9831DDCE1D66B8FF0035D8F0 /* start_popo@2x.png */,
-				9831DDC71D66AE7C0035D8F0 /* 路线规划-步行@2x.png */,
-				9831DDC81D66AE7C0035D8F0 /* 路线规划-地铁@2x.png */,
-				9831DDC91D66AE7C0035D8F0 /* 路线规划-公交@2x.png */,
-				9831DDBA1D66A0AA0035D8F0 /* BusLineCell.swift */,
-				9831DDBB1D66A0AA0035D8F0 /* BusLineResultView.swift */,
-				9831DDBC1D66A0AA0035D8F0 /* BusLineResultViewController.swift */,
-				9831DDBD1D66A0AA0035D8F0 /* BusLineSectionView.swift */,
-				9831DDBE1D66A0AA0035D8F0 /* BusLineViewModel.swift */,
-			);
-			name = Bus;
-			sourceTree = "<group>";
-		};
-		988A81B01D659050001BDE41 /* SouthgisTileLayer */ = {
-			isa = PBXGroup;
-			children = (
-				988A81B11D659050001BDE41 /* BdTile */,
-				988A81B81D659050001BDE41 /* CustomTile */,
-				988A81C31D659050001BDE41 /* README.md */,
-				988A81C41D659050001BDE41 /* SGSWMTS */,
-				988A81CD1D659050001BDE41 /* SouthgisBaseTiledServiceLayer.h */,
-				988A81CE1D659050001BDE41 /* SouthgisBaseTiledServiceLayer.m */,
-				988A81CF1D659050001BDE41 /* SouthgisTiledMapHelper.h */,
-				988A81D01D659050001BDE41 /* SouthgisTiledMapHelper.m */,
-				988A81D11D659050001BDE41 /* TdtTile */,
-				988A81DE1D659050001BDE41 /* WMS */,
-			);
-			path = SouthgisTileLayer;
-			sourceTree = "<group>";
-		};
-		988A81B11D659050001BDE41 /* BdTile */ = {
-			isa = PBXGroup;
-			children = (
-				988A81B21D659050001BDE41 /* Southgis_BdWMTSLayerInfoDelegate.h */,
-				988A81B31D659050001BDE41 /* Southgis_BdWMTSLayerInfoDelegate.m */,
-				988A81B41D659050001BDE41 /* Southgis_BdWMTSLayerOperation.h */,
-				988A81B51D659050001BDE41 /* Southgis_BdWMTSLayerOperation.m */,
-				988A81B61D659050001BDE41 /* SouthgisBdWMTSLayer.h */,
-				988A81B71D659050001BDE41 /* SouthgisBdWMTSLayer.m */,
-			);
-			path = BdTile;
-			sourceTree = "<group>";
-		};
-		988A81B81D659050001BDE41 /* CustomTile */ = {
-			isa = PBXGroup;
-			children = (
-				988A81B91D659050001BDE41 /* Southgis_TiledServiceLayer.h */,
-				988A81BA1D659050001BDE41 /* Southgis_TiledServiceLayer.m */,
-				988A81BB1D659050001BDE41 /* Southgis_TiledServiceLayerInfo.h */,
-				988A81BC1D659050001BDE41 /* Southgis_TiledServiceLayerInfo.m */,
-				988A81BD1D659050001BDE41 /* Southgis_TiledServiceLayerInfoOperation+OfflineTiledInfo.h */,
-				988A81BE1D659050001BDE41 /* Southgis_TiledServiceLayerInfoOperation+OfflineTiledInfo.m */,
-				988A81BF1D659050001BDE41 /* Southgis_TiledServiceLayerInfoOperation.h */,
-				988A81C01D659050001BDE41 /* Southgis_TiledServiceLayerInfoOperation.m */,
-				988A81C11D659050001BDE41 /* Southigs_TiledServiceLayerOperation.h */,
-				988A81C21D659050001BDE41 /* Southigs_TiledServiceLayerOperation.m */,
-			);
-			path = CustomTile;
-			sourceTree = "<group>";
-		};
-		988A81C41D659050001BDE41 /* SGSWMTS */ = {
-			isa = PBXGroup;
-			children = (
-				988A81C51D659050001BDE41 /* NSDictionary+YYAdd.h */,
-				988A81C61D659050001BDE41 /* NSDictionary+YYAdd.m */,
-				988A81C71D659050001BDE41 /* SGSWMTSInfo.h */,
-				988A81C81D659050001BDE41 /* SGSWMTSInfo.m */,
-				988A81C91D659050001BDE41 /* SGSWMTSLayer.h */,
-				988A81CA1D659050001BDE41 /* SGSWMTSLayer.m */,
-				988A81CB1D659050001BDE41 /* SGSWMTSLayerInfo.h */,
-				988A81CC1D659050001BDE41 /* SGSWMTSLayerInfo.m */,
-			);
-			path = SGSWMTS;
-			sourceTree = "<group>";
-		};
-		988A81D11D659050001BDE41 /* TdtTile */ = {
-			isa = PBXGroup;
-			children = (
-				988A81D21D659050001BDE41 /* Southgis_WMTSLayerOperation.h */,
-				988A81D31D659050001BDE41 /* Southgis_WMTSLayerOperation.m */,
-				988A81D41D659050001BDE41 /* SouthgisTdt_LayerInfo.h */,
-				988A81D51D659050001BDE41 /* SouthgisTdt_LayerInfo.m */,
-				988A81D61D659050001BDE41 /* SouthgisTdt_TileLayer.h */,
-				988A81D71D659050001BDE41 /* SouthgisTdt_TileLayer.m */,
-				988A81D81D659050001BDE41 /* SouthgisTdtType.h */,
-				988A81D91D659050001BDE41 /* SouthgisTdtType.m */,
-				988A81DC1D659050001BDE41 /* SouthgisTianDiTuWMTSLayerInfoDelegate.h */,
-				988A81DD1D659050001BDE41 /* SouthgisTianDiTuWMTSLayerInfoDelegate.m */,
-			);
-			path = TdtTile;
-			sourceTree = "<group>";
-		};
-		988A81DE1D659050001BDE41 /* WMS */ = {
-			isa = PBXGroup;
-			children = (
-				988A81DF1D659050001BDE41 /* SGSTdtWMSLayer.swift */,
-			);
-			path = WMS;
-			sourceTree = "<group>";
-		};
-		D406E71DD6F520B6ACF7821F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D6DCE82D40849D1F22A8F0E0 /* Pods_SGRoutePlan_Example.framework */,
-				68BACFE452E50D691CAE9A82 /* Pods.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		EE23A32DCE652305728DAE86 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				95CBD148D159D021D0996CFA /* Pods-SGRoutePlan_Example.debug.xcconfig */,
-				FC43576F2C6DE6050DF4E522 /* Pods-SGRoutePlan_Example.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		607FACCF1AFB9204008FA782 /* SGRoutePlan_Example */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "SGRoutePlan_Example" */;
-			buildPhases = (
-				B984CF99EB7C424C9B4F38AE /* Check Pods Manifest.lock */,
-				607FACCC1AFB9204008FA782 /* Sources */,
-				607FACCD1AFB9204008FA782 /* Frameworks */,
-				607FACCE1AFB9204008FA782 /* Resources */,
-				9D673BA430377481F9FBE906 /* Embed Pods Frameworks */,
-				F51A2A8FCED95B62458779B5 /* Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SGRoutePlan_Example;
-			productName = SGRoutePlan;
-			productReference = 607FACD01AFB9204008FA782 /* SGRoutePlan_Example.app */;
-			productType = "com.apple.product-type.application";
-		};
-		607FACE41AFB9204008FA782 /* SGRoutePlan_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "SGRoutePlan_Tests" */;
-			buildPhases = (
-				607FACE11AFB9204008FA782 /* Sources */,
-				607FACE21AFB9204008FA782 /* Frameworks */,
-				607FACE31AFB9204008FA782 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				607FACE71AFB9204008FA782 /* PBXTargetDependency */,
-			);
-			name = SGRoutePlan_Tests;
-			productName = Tests;
-			productReference = 607FACE51AFB9204008FA782 /* SGRoutePlan_Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		607FACC81AFB9204008FA782 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0720;
-				ORGANIZATIONNAME = CocoaPods;
-				TargetAttributes = {
-					607FACCF1AFB9204008FA782 = {
-						CreatedOnToolsVersion = 6.3.1;
-					};
-					607FACE41AFB9204008FA782 = {
-						CreatedOnToolsVersion = 6.3.1;
-						TestTargetID = 607FACCF1AFB9204008FA782;
-					};
-				};
-			};
-			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "SGRoutePlan" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = 607FACC71AFB9204008FA782;
-			productRefGroup = 607FACD11AFB9204008FA782 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				607FACCF1AFB9204008FA782 /* SGRoutePlan_Example */,
-				607FACE41AFB9204008FA782 /* SGRoutePlan_Tests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		607FACCE1AFB9204008FA782 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
-				98C60E661D65BD5B0084CDA4 /* list_numb_img.png in Resources */,
-				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
-				9831DDCA1D66AE7C0035D8F0 /* 路线规划-步行@2x.png in Resources */,
-				9831DDCC1D66AE7C0035D8F0 /* 路线规划-公交@2x.png in Resources */,
-				9831DDD01D66B8FF0035D8F0 /* start_popo@2x.png in Resources */,
-				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
-				9831DDCB1D66AE7C0035D8F0 /* 路线规划-地铁@2x.png in Resources */,
-				9831DDCF1D66B8FF0035D8F0 /* end_popo@2x.png in Resources */,
-				98C60E671D65BD5B0084CDA4 /* list_numb_img@2x.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		607FACE31AFB9204008FA782 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		9D673BA430377481F9FBE906 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SGRoutePlan_Example/Pods-SGRoutePlan_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B984CF99EB7C424C9B4F38AE /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		F51A2A8FCED95B62458779B5 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SGRoutePlan_Example/Pods-SGRoutePlan_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		607FACCC1AFB9204008FA782 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				988A81E11D659050001BDE41 /* Southgis_BdWMTSLayerOperation.m in Sources */,
-				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
-				988A80A91D6549E4001BDE41 /* POIMapViewController.swift in Sources */,
-				9831DDC21D66A0AA0035D8F0 /* BusLineSectionView.swift in Sources */,
-				9831DDC01D66A0AA0035D8F0 /* BusLineResultView.swift in Sources */,
-				988A81E01D659050001BDE41 /* Southgis_BdWMTSLayerInfoDelegate.m in Sources */,
-				9831DDC51D66A1210035D8F0 /* UIColor+Ext.swift in Sources */,
-				988A81EA1D659050001BDE41 /* SGSWMTSInfo.m in Sources */,
-				988A81E81D659050001BDE41 /* README.md in Sources */,
-				988A81E41D659050001BDE41 /* Southgis_TiledServiceLayerInfo.m in Sources */,
-				988A81F21D659050001BDE41 /* SouthgisTdtType.m in Sources */,
-				988A81E31D659050001BDE41 /* Southgis_TiledServiceLayer.m in Sources */,
-				988A81E71D659050001BDE41 /* Southigs_TiledServiceLayerOperation.m in Sources */,
-				988A81E61D659050001BDE41 /* Southgis_TiledServiceLayerInfoOperation.m in Sources */,
-				988A80A31D6540FE001BDE41 /* RoutePlanViewController.swift in Sources */,
-				988A81E51D659050001BDE41 /* Southgis_TiledServiceLayerInfoOperation+OfflineTiledInfo.m in Sources */,
-				988A81E21D659050001BDE41 /* SouthgisBdWMTSLayer.m in Sources */,
-				988A81ED1D659050001BDE41 /* SouthgisBaseTiledServiceLayer.m in Sources */,
-				988A81EC1D659050001BDE41 /* SGSWMTSLayerInfo.m in Sources */,
-				988A81E91D659050001BDE41 /* NSDictionary+YYAdd.m in Sources */,
-				988A81EB1D659050001BDE41 /* SGSWMTSLayer.m in Sources */,
-				9831DDBF1D66A0AA0035D8F0 /* BusLineCell.swift in Sources */,
-				9831DDC11D66A0AA0035D8F0 /* BusLineResultViewController.swift in Sources */,
-				988A81F51D659050001BDE41 /* SGSTdtWMSLayer.swift in Sources */,
-				988A81F01D659050001BDE41 /* SouthgisTdt_LayerInfo.m in Sources */,
-				988A80FF1D654DCB001BDE41 /* AGSMapUtils.swift in Sources */,
-				988A81F41D659050001BDE41 /* SouthgisTianDiTuWMTSLayerInfoDelegate.m in Sources */,
-				988A81EF1D659050001BDE41 /* Southgis_WMTSLayerOperation.m in Sources */,
-				988A81F11D659050001BDE41 /* SouthgisTdt_TileLayer.m in Sources */,
-				988A81EE1D659050001BDE41 /* SouthgisTiledMapHelper.m in Sources */,
-				9831DDC31D66A0AA0035D8F0 /* BusLineViewModel.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		607FACE11AFB9204008FA782 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		607FACE71AFB9204008FA782 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 607FACCF1AFB9204008FA782 /* SGRoutePlan_Example */;
-			targetProxy = 607FACE61AFB9204008FA782 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				607FACDA1AFB9204008FA782 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		607FACDE1AFB9204008FA782 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				607FACDF1AFB9204008FA782 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		607FACED1AFB9204008FA782 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Debug;
-		};
-		607FACEE1AFB9204008FA782 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		607FACF01AFB9204008FA782 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 95CBD148D159D021D0996CFA /* Pods-SGRoutePlan_Example.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = $HOME/Library/SDKs/ArcGIS/iOS;
-				INFOPLIST_FILE = SGRoutePlan/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MODULE_NAME = ExampleApp;
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-framework",
-					"\"ObjectMapper\"",
-					"-framework",
-					"\"SGRoutePlan\"",
-					"-ObjC",
-					"-framework",
-					ArcGIS,
-					"-l",
-					"c++",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/wuxiaoxing/Desktop/数码开源代码/SGRoutePlan/Example/SGRoutePlan/SGRoutePlan_Example-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Debug;
-		};
-		607FACF11AFB9204008FA782 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FC43576F2C6DE6050DF4E522 /* Pods-SGRoutePlan_Example.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = $HOME/Library/SDKs/ArcGIS/iOS;
-				INFOPLIST_FILE = SGRoutePlan/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MODULE_NAME = ExampleApp;
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-framework",
-					"\"ObjectMapper\"",
-					"-framework",
-					"\"SGRoutePlan\"",
-					"-ObjC",
-					"-framework",
-					ArcGIS,
-					"-l",
-					"c++",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/wuxiaoxing/Desktop/数码开源代码/SGRoutePlan/Example/SGRoutePlan/SGRoutePlan_Example-Bridging-Header.h";
-			};
-			name = Release;
-		};
-		607FACF31AFB9204008FA782 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		607FACF41AFB9204008FA782 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "SGRoutePlan" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				607FACED1AFB9204008FA782 /* Debug */,
-				607FACEE1AFB9204008FA782 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "SGRoutePlan_Example" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				607FACF01AFB9204008FA782 /* Debug */,
-				607FACF11AFB9204008FA782 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "SGRoutePlan_Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				607FACF31AFB9204008FA782 /* Debug */,
-				607FACF41AFB9204008FA782 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = 607FACC81AFB9204008FA782 /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>1C7129B4EA5697C3391095AE</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>name</key>
+			<string>LICENSE</string>
+			<key>path</key>
+			<string>../LICENSE</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>607FACC71AFB9204008FA782</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>607FACF51AFB993E008FA782</string>
+				<string>607FACD21AFB9204008FA782</string>
+				<string>607FACE81AFB9204008FA782</string>
+				<string>607FACD11AFB9204008FA782</string>
+				<string>EE23A32DCE652305728DAE86</string>
+				<string>D406E71DD6F520B6ACF7821F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>607FACC81AFB9204008FA782</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastSwiftUpdateCheck</key>
+				<string>0730</string>
+				<key>LastUpgradeCheck</key>
+				<string>0720</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>CocoaPods</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>607FACCF1AFB9204008FA782</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>6.3.1</string>
+					</dict>
+					<key>607FACE41AFB9204008FA782</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>6.3.1</string>
+						<key>TestTargetID</key>
+						<string>607FACCF1AFB9204008FA782</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>607FACCB1AFB9204008FA782</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>607FACC71AFB9204008FA782</string>
+			<key>productRefGroup</key>
+			<string>607FACD11AFB9204008FA782</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>607FACCF1AFB9204008FA782</string>
+				<string>607FACE41AFB9204008FA782</string>
+			</array>
+		</dict>
+		<key>607FACCB1AFB9204008FA782</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>607FACED1AFB9204008FA782</string>
+				<string>607FACEE1AFB9204008FA782</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>607FACCC1AFB9204008FA782</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>988A81E11D659050001BDE41</string>
+				<string>607FACD61AFB9204008FA782</string>
+				<string>988A80A91D6549E4001BDE41</string>
+				<string>9831DDC21D66A0AA0035D8F0</string>
+				<string>9831DDC01D66A0AA0035D8F0</string>
+				<string>988A81E01D659050001BDE41</string>
+				<string>9831DDC51D66A1210035D8F0</string>
+				<string>988A81EA1D659050001BDE41</string>
+				<string>988A81E81D659050001BDE41</string>
+				<string>988A81E41D659050001BDE41</string>
+				<string>988A81F21D659050001BDE41</string>
+				<string>988A81E31D659050001BDE41</string>
+				<string>988A81E71D659050001BDE41</string>
+				<string>988A81E61D659050001BDE41</string>
+				<string>988A80A31D6540FE001BDE41</string>
+				<string>988A81E51D659050001BDE41</string>
+				<string>988A81E21D659050001BDE41</string>
+				<string>988A81ED1D659050001BDE41</string>
+				<string>988A81EC1D659050001BDE41</string>
+				<string>988A81E91D659050001BDE41</string>
+				<string>988A81EB1D659050001BDE41</string>
+				<string>9831DDBF1D66A0AA0035D8F0</string>
+				<string>9831DDC11D66A0AA0035D8F0</string>
+				<string>988A81F51D659050001BDE41</string>
+				<string>988A81F01D659050001BDE41</string>
+				<string>988A80FF1D654DCB001BDE41</string>
+				<string>988A81F41D659050001BDE41</string>
+				<string>988A81EF1D659050001BDE41</string>
+				<string>988A81F11D659050001BDE41</string>
+				<string>988A81EE1D659050001BDE41</string>
+				<string>9831DDC31D66A0AA0035D8F0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>607FACCD1AFB9204008FA782</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>7614E377686DAC1E349C3E52</string>
+				<string>DB3D21C0DE2624ED9CE1A8D5</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>607FACCE1AFB9204008FA782</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>607FACDB1AFB9204008FA782</string>
+				<string>98C60E661D65BD5B0084CDA4</string>
+				<string>607FACE01AFB9204008FA782</string>
+				<string>9831DDCA1D66AE7C0035D8F0</string>
+				<string>9831DDCC1D66AE7C0035D8F0</string>
+				<string>9831DDD01D66B8FF0035D8F0</string>
+				<string>607FACDD1AFB9204008FA782</string>
+				<string>9831DDCB1D66AE7C0035D8F0</string>
+				<string>9831DDCF1D66B8FF0035D8F0</string>
+				<string>98C60E671D65BD5B0084CDA4</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>607FACCF1AFB9204008FA782</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>607FACEF1AFB9204008FA782</string>
+			<key>buildPhases</key>
+			<array>
+				<string>B984CF99EB7C424C9B4F38AE</string>
+				<string>607FACCC1AFB9204008FA782</string>
+				<string>607FACCD1AFB9204008FA782</string>
+				<string>607FACCE1AFB9204008FA782</string>
+				<string>9D673BA430377481F9FBE906</string>
+				<string>F51A2A8FCED95B62458779B5</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>SGRoutePlan_Example</string>
+			<key>productName</key>
+			<string>SGRoutePlan</string>
+			<key>productReference</key>
+			<string>607FACD01AFB9204008FA782</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>607FACD01AFB9204008FA782</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>SGRoutePlan_Example.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>607FACD11AFB9204008FA782</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>607FACD01AFB9204008FA782</string>
+				<string>607FACE51AFB9204008FA782</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>607FACD21AFB9204008FA782</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9831DDC61D66A53D0035D8F0</string>
+				<string>98C60E641D65BD5B0084CDA4</string>
+				<string>98C60E651D65BD5B0084CDA4</string>
+				<string>988A81B01D659050001BDE41</string>
+				<string>988A81AF1D658ED5001BDE41</string>
+				<string>988A80FD1D654DCB001BDE41</string>
+				<string>607FACD51AFB9204008FA782</string>
+				<string>607FACD91AFB9204008FA782</string>
+				<string>607FACDC1AFB9204008FA782</string>
+				<string>607FACDE1AFB9204008FA782</string>
+				<string>607FACD31AFB9204008FA782</string>
+				<string>988A80A21D6540FE001BDE41</string>
+				<string>988A80A81D6549E4001BDE41</string>
+				<string>9831DDC41D66A1210035D8F0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Example for SGRoutePlan</string>
+			<key>path</key>
+			<string>SGRoutePlan</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>607FACD31AFB9204008FA782</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>607FACD41AFB9204008FA782</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>607FACD41AFB9204008FA782</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>607FACD51AFB9204008FA782</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AppDelegate.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>607FACD61AFB9204008FA782</key>
+		<dict>
+			<key>fileRef</key>
+			<string>607FACD51AFB9204008FA782</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>607FACD91AFB9204008FA782</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>607FACDA1AFB9204008FA782</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>607FACDA1AFB9204008FA782</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>607FACDB1AFB9204008FA782</key>
+		<dict>
+			<key>fileRef</key>
+			<string>607FACD91AFB9204008FA782</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>607FACDC1AFB9204008FA782</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Images.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>607FACDD1AFB9204008FA782</key>
+		<dict>
+			<key>fileRef</key>
+			<string>607FACDC1AFB9204008FA782</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>607FACDE1AFB9204008FA782</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>607FACDF1AFB9204008FA782</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>LaunchScreen.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>607FACDF1AFB9204008FA782</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/LaunchScreen.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>607FACE01AFB9204008FA782</key>
+		<dict>
+			<key>fileRef</key>
+			<string>607FACDE1AFB9204008FA782</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>607FACE11AFB9204008FA782</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>607FACEC1AFB9204008FA782</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>607FACE21AFB9204008FA782</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>607FACE31AFB9204008FA782</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>607FACE41AFB9204008FA782</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>607FACF21AFB9204008FA782</string>
+			<key>buildPhases</key>
+			<array>
+				<string>607FACE11AFB9204008FA782</string>
+				<string>607FACE21AFB9204008FA782</string>
+				<string>607FACE31AFB9204008FA782</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>607FACE71AFB9204008FA782</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>SGRoutePlan_Tests</string>
+			<key>productName</key>
+			<string>Tests</string>
+			<key>productReference</key>
+			<string>607FACE51AFB9204008FA782</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>607FACE51AFB9204008FA782</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>SGRoutePlan_Tests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>607FACE61AFB9204008FA782</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>607FACC81AFB9204008FA782</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>607FACCF1AFB9204008FA782</string>
+			<key>remoteInfo</key>
+			<string>SGRoutePlan</string>
+		</dict>
+		<key>607FACE71AFB9204008FA782</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>607FACCF1AFB9204008FA782</string>
+			<key>targetProxy</key>
+			<string>607FACE61AFB9204008FA782</string>
+		</dict>
+		<key>607FACE81AFB9204008FA782</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>607FACEB1AFB9204008FA782</string>
+				<string>607FACE91AFB9204008FA782</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Tests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>607FACE91AFB9204008FA782</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>607FACEA1AFB9204008FA782</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>607FACEA1AFB9204008FA782</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>607FACEB1AFB9204008FA782</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>Tests.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>607FACEC1AFB9204008FA782</key>
+		<dict>
+			<key>fileRef</key>
+			<string>607FACEB1AFB9204008FA782</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>607FACED1AFB9204008FA782</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>ENABLE_TESTABILITY</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.3</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>607FACEE1AFB9204008FA782</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.3</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>607FACEF1AFB9204008FA782</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>607FACF01AFB9204008FA782</string>
+				<string>607FACF11AFB9204008FA782</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>607FACF01AFB9204008FA782</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>95CBD148D159D021D0996CFA</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<string>$HOME/Library/SDKs/ArcGIS/iOS</string>
+				<key>INFOPLIST_FILE</key>
+				<string>SGRoutePlan/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>MODULE_NAME</key>
+				<string>ExampleApp</string>
+				<key>OTHER_LDFLAGS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>-framework</string>
+					<string>"ObjectMapper"</string>
+					<string>-framework</string>
+					<string>"SGRoutePlan"</string>
+					<string>-ObjC</string>
+					<string>-framework</string>
+					<string>ArcGIS</string>
+					<string>-l</string>
+					<string>c++</string>
+				</array>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
+				<string>/Users/wuxiaoxing/Desktop/&#25968;&#30721;&#24320;&#28304;&#20195;&#30721;/SGRoutePlan/Example/SGRoutePlan/SGRoutePlan_Example-Bridging-Header.h</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>607FACF11AFB9204008FA782</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>FC43576F2C6DE6050DF4E522</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<string>$HOME/Library/SDKs/ArcGIS/iOS</string>
+				<key>INFOPLIST_FILE</key>
+				<string>SGRoutePlan/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>MODULE_NAME</key>
+				<string>ExampleApp</string>
+				<key>OTHER_LDFLAGS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>-framework</string>
+					<string>"ObjectMapper"</string>
+					<string>-framework</string>
+					<string>"SGRoutePlan"</string>
+					<string>-ObjC</string>
+					<string>-framework</string>
+					<string>ArcGIS</string>
+					<string>-l</string>
+					<string>c++</string>
+				</array>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
+				<string>/Users/wuxiaoxing/Desktop/&#25968;&#30721;&#24320;&#28304;&#20195;&#30721;/SGRoutePlan/Example/SGRoutePlan/SGRoutePlan_Example-Bridging-Header.h</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>607FACF21AFB9204008FA782</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>607FACF31AFB9204008FA782</string>
+				<string>607FACF41AFB9204008FA782</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>607FACF31AFB9204008FA782</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>Tests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>607FACF41AFB9204008FA782</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>Tests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>607FACF51AFB993E008FA782</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D9E69844B30330353C9EEC7E</string>
+				<string>99FF3A5E504B41038F7FB422</string>
+				<string>1C7129B4EA5697C3391095AE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Podspec Metadata</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>68BACFE452E50D691CAE9A82</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>7614E377686DAC1E349C3E52</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D6DCE82D40849D1F22A8F0E0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>95CBD148D159D021D0996CFA</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-SGRoutePlan_Example.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-SGRoutePlan_Example/Pods-SGRoutePlan_Example.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9831DDBA1D66A0AA0035D8F0</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>BusLineCell.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9831DDBB1D66A0AA0035D8F0</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>BusLineResultView.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9831DDBC1D66A0AA0035D8F0</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>BusLineResultViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9831DDBD1D66A0AA0035D8F0</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>BusLineSectionView.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9831DDBE1D66A0AA0035D8F0</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>BusLineViewModel.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9831DDBF1D66A0AA0035D8F0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9831DDBA1D66A0AA0035D8F0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9831DDC01D66A0AA0035D8F0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9831DDBB1D66A0AA0035D8F0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9831DDC11D66A0AA0035D8F0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9831DDBC1D66A0AA0035D8F0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9831DDC21D66A0AA0035D8F0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9831DDBD1D66A0AA0035D8F0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9831DDC31D66A0AA0035D8F0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9831DDBE1D66A0AA0035D8F0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9831DDC41D66A1210035D8F0</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>UIColor+Ext.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9831DDC51D66A1210035D8F0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9831DDC41D66A1210035D8F0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9831DDC61D66A53D0035D8F0</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9831DDCD1D66B8FF0035D8F0</string>
+				<string>9831DDCE1D66B8FF0035D8F0</string>
+				<string>9831DDC71D66AE7C0035D8F0</string>
+				<string>9831DDC81D66AE7C0035D8F0</string>
+				<string>9831DDC91D66AE7C0035D8F0</string>
+				<string>9831DDBA1D66A0AA0035D8F0</string>
+				<string>9831DDBB1D66A0AA0035D8F0</string>
+				<string>9831DDBC1D66A0AA0035D8F0</string>
+				<string>9831DDBD1D66A0AA0035D8F0</string>
+				<string>9831DDBE1D66A0AA0035D8F0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Bus</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9831DDC71D66AE7C0035D8F0</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>&#36335;&#32447;&#35268;&#21010;-&#27493;&#34892;@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9831DDC81D66AE7C0035D8F0</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>&#36335;&#32447;&#35268;&#21010;-&#22320;&#38081;@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9831DDC91D66AE7C0035D8F0</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>&#36335;&#32447;&#35268;&#21010;-&#20844;&#20132;@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9831DDCA1D66AE7C0035D8F0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9831DDC71D66AE7C0035D8F0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9831DDCB1D66AE7C0035D8F0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9831DDC81D66AE7C0035D8F0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9831DDCC1D66AE7C0035D8F0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9831DDC91D66AE7C0035D8F0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9831DDCD1D66B8FF0035D8F0</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>end_popo@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9831DDCE1D66B8FF0035D8F0</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>start_popo@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9831DDCF1D66B8FF0035D8F0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9831DDCD1D66B8FF0035D8F0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9831DDD01D66B8FF0035D8F0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9831DDCE1D66B8FF0035D8F0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>988A80A21D6540FE001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>RoutePlanViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A80A31D6540FE001BDE41</key>
+		<dict>
+			<key>fileRef</key>
+			<string>988A80A21D6540FE001BDE41</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>988A80A81D6549E4001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>POIMapViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A80A91D6549E4001BDE41</key>
+		<dict>
+			<key>fileRef</key>
+			<string>988A80A81D6549E4001BDE41</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>988A80FD1D654DCB001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AGSMapUtils.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A80FF1D654DCB001BDE41</key>
+		<dict>
+			<key>fileRef</key>
+			<string>988A80FD1D654DCB001BDE41</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>988A81AF1D658ED5001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SGRoutePlan_Example-Bridging-Header.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81B01D659050001BDE41</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>988A81B11D659050001BDE41</string>
+				<string>988A81B81D659050001BDE41</string>
+				<string>988A81C31D659050001BDE41</string>
+				<string>988A81C41D659050001BDE41</string>
+				<string>988A81CD1D659050001BDE41</string>
+				<string>988A81CE1D659050001BDE41</string>
+				<string>988A81CF1D659050001BDE41</string>
+				<string>988A81D01D659050001BDE41</string>
+				<string>988A81D11D659050001BDE41</string>
+				<string>988A81DE1D659050001BDE41</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>SouthgisTileLayer</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81B11D659050001BDE41</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>988A81B21D659050001BDE41</string>
+				<string>988A81B31D659050001BDE41</string>
+				<string>988A81B41D659050001BDE41</string>
+				<string>988A81B51D659050001BDE41</string>
+				<string>988A81B61D659050001BDE41</string>
+				<string>988A81B71D659050001BDE41</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>BdTile</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81B21D659050001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Southgis_BdWMTSLayerInfoDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81B31D659050001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Southgis_BdWMTSLayerInfoDelegate.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81B41D659050001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Southgis_BdWMTSLayerOperation.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81B51D659050001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Southgis_BdWMTSLayerOperation.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81B61D659050001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SouthgisBdWMTSLayer.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81B71D659050001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SouthgisBdWMTSLayer.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81B81D659050001BDE41</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>988A81B91D659050001BDE41</string>
+				<string>988A81BA1D659050001BDE41</string>
+				<string>988A81BB1D659050001BDE41</string>
+				<string>988A81BC1D659050001BDE41</string>
+				<string>988A81BD1D659050001BDE41</string>
+				<string>988A81BE1D659050001BDE41</string>
+				<string>988A81BF1D659050001BDE41</string>
+				<string>988A81C01D659050001BDE41</string>
+				<string>988A81C11D659050001BDE41</string>
+				<string>988A81C21D659050001BDE41</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>CustomTile</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81B91D659050001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Southgis_TiledServiceLayer.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81BA1D659050001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Southgis_TiledServiceLayer.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81BB1D659050001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Southgis_TiledServiceLayerInfo.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81BC1D659050001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Southgis_TiledServiceLayerInfo.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81BD1D659050001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Southgis_TiledServiceLayerInfoOperation+OfflineTiledInfo.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81BE1D659050001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Southgis_TiledServiceLayerInfoOperation+OfflineTiledInfo.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81BF1D659050001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Southgis_TiledServiceLayerInfoOperation.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81C01D659050001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Southgis_TiledServiceLayerInfoOperation.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81C11D659050001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Southigs_TiledServiceLayerOperation.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81C21D659050001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Southigs_TiledServiceLayerOperation.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81C31D659050001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>net.daringfireball.markdown</string>
+			<key>path</key>
+			<string>README.md</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81C41D659050001BDE41</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>988A81C51D659050001BDE41</string>
+				<string>988A81C61D659050001BDE41</string>
+				<string>988A81C71D659050001BDE41</string>
+				<string>988A81C81D659050001BDE41</string>
+				<string>988A81C91D659050001BDE41</string>
+				<string>988A81CA1D659050001BDE41</string>
+				<string>988A81CB1D659050001BDE41</string>
+				<string>988A81CC1D659050001BDE41</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>SGSWMTS</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81C51D659050001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NSDictionary+YYAdd.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81C61D659050001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSDictionary+YYAdd.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81C71D659050001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SGSWMTSInfo.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81C81D659050001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SGSWMTSInfo.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81C91D659050001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SGSWMTSLayer.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81CA1D659050001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SGSWMTSLayer.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81CB1D659050001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SGSWMTSLayerInfo.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81CC1D659050001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SGSWMTSLayerInfo.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81CD1D659050001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SouthgisBaseTiledServiceLayer.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81CE1D659050001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SouthgisBaseTiledServiceLayer.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81CF1D659050001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SouthgisTiledMapHelper.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81D01D659050001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SouthgisTiledMapHelper.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81D11D659050001BDE41</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>988A81D21D659050001BDE41</string>
+				<string>988A81D31D659050001BDE41</string>
+				<string>988A81D41D659050001BDE41</string>
+				<string>988A81D51D659050001BDE41</string>
+				<string>988A81D61D659050001BDE41</string>
+				<string>988A81D71D659050001BDE41</string>
+				<string>988A81D81D659050001BDE41</string>
+				<string>988A81D91D659050001BDE41</string>
+				<string>988A81DC1D659050001BDE41</string>
+				<string>988A81DD1D659050001BDE41</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>TdtTile</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81D21D659050001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Southgis_WMTSLayerOperation.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81D31D659050001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Southgis_WMTSLayerOperation.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81D41D659050001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SouthgisTdt_LayerInfo.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81D51D659050001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SouthgisTdt_LayerInfo.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81D61D659050001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SouthgisTdt_TileLayer.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81D71D659050001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SouthgisTdt_TileLayer.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81D81D659050001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SouthgisTdtType.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81D91D659050001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SouthgisTdtType.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81DC1D659050001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SouthgisTianDiTuWMTSLayerInfoDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81DD1D659050001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SouthgisTianDiTuWMTSLayerInfoDelegate.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81DE1D659050001BDE41</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>988A81DF1D659050001BDE41</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>WMS</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81DF1D659050001BDE41</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>SGSTdtWMSLayer.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>988A81E01D659050001BDE41</key>
+		<dict>
+			<key>fileRef</key>
+			<string>988A81B31D659050001BDE41</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>988A81E11D659050001BDE41</key>
+		<dict>
+			<key>fileRef</key>
+			<string>988A81B51D659050001BDE41</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>988A81E21D659050001BDE41</key>
+		<dict>
+			<key>fileRef</key>
+			<string>988A81B71D659050001BDE41</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>988A81E31D659050001BDE41</key>
+		<dict>
+			<key>fileRef</key>
+			<string>988A81BA1D659050001BDE41</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>988A81E41D659050001BDE41</key>
+		<dict>
+			<key>fileRef</key>
+			<string>988A81BC1D659050001BDE41</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>988A81E51D659050001BDE41</key>
+		<dict>
+			<key>fileRef</key>
+			<string>988A81BE1D659050001BDE41</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>988A81E61D659050001BDE41</key>
+		<dict>
+			<key>fileRef</key>
+			<string>988A81C01D659050001BDE41</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>988A81E71D659050001BDE41</key>
+		<dict>
+			<key>fileRef</key>
+			<string>988A81C21D659050001BDE41</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>988A81E81D659050001BDE41</key>
+		<dict>
+			<key>fileRef</key>
+			<string>988A81C31D659050001BDE41</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>988A81E91D659050001BDE41</key>
+		<dict>
+			<key>fileRef</key>
+			<string>988A81C61D659050001BDE41</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>988A81EA1D659050001BDE41</key>
+		<dict>
+			<key>fileRef</key>
+			<string>988A81C81D659050001BDE41</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>988A81EB1D659050001BDE41</key>
+		<dict>
+			<key>fileRef</key>
+			<string>988A81CA1D659050001BDE41</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>988A81EC1D659050001BDE41</key>
+		<dict>
+			<key>fileRef</key>
+			<string>988A81CC1D659050001BDE41</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>988A81ED1D659050001BDE41</key>
+		<dict>
+			<key>fileRef</key>
+			<string>988A81CE1D659050001BDE41</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>988A81EE1D659050001BDE41</key>
+		<dict>
+			<key>fileRef</key>
+			<string>988A81D01D659050001BDE41</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>988A81EF1D659050001BDE41</key>
+		<dict>
+			<key>fileRef</key>
+			<string>988A81D31D659050001BDE41</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>988A81F01D659050001BDE41</key>
+		<dict>
+			<key>fileRef</key>
+			<string>988A81D51D659050001BDE41</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>988A81F11D659050001BDE41</key>
+		<dict>
+			<key>fileRef</key>
+			<string>988A81D71D659050001BDE41</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>988A81F21D659050001BDE41</key>
+		<dict>
+			<key>fileRef</key>
+			<string>988A81D91D659050001BDE41</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>988A81F41D659050001BDE41</key>
+		<dict>
+			<key>fileRef</key>
+			<string>988A81DD1D659050001BDE41</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>988A81F51D659050001BDE41</key>
+		<dict>
+			<key>fileRef</key>
+			<string>988A81DF1D659050001BDE41</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>98C60E641D65BD5B0084CDA4</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>list_numb_img.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>98C60E651D65BD5B0084CDA4</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>list_numb_img@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>98C60E661D65BD5B0084CDA4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>98C60E641D65BD5B0084CDA4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>98C60E671D65BD5B0084CDA4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>98C60E651D65BD5B0084CDA4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>99FF3A5E504B41038F7FB422</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>net.daringfireball.markdown</string>
+			<key>name</key>
+			<string>README.md</string>
+			<key>path</key>
+			<string>../README.md</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9D673BA430377481F9FBE906</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Embed Pods Frameworks</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-SGRoutePlan_Example/Pods-SGRoutePlan_Example-frameworks.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>B984CF99EB7C424C9B4F38AE</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>D406E71DD6F520B6ACF7821F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D6DCE82D40849D1F22A8F0E0</string>
+				<string>68BACFE452E50D691CAE9A82</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D6DCE82D40849D1F22A8F0E0</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods_SGRoutePlan_Example.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>D9E69844B30330353C9EEC7E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>name</key>
+			<string>SGRoutePlan.podspec</string>
+			<key>path</key>
+			<string>../SGRoutePlan.podspec</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DB3D21C0DE2624ED9CE1A8D5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>68BACFE452E50D691CAE9A82</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>EE23A32DCE652305728DAE86</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>95CBD148D159D021D0996CFA</string>
+				<string>FC43576F2C6DE6050DF4E522</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F51A2A8FCED95B62458779B5</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-SGRoutePlan_Example/Pods-SGRoutePlan_Example-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>FC43576F2C6DE6050DF4E522</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-SGRoutePlan_Example.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-SGRoutePlan_Example/Pods-SGRoutePlan_Example.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>607FACC81AFB9204008FA782</string>
+</dict>
+</plist>

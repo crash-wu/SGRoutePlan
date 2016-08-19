@@ -57,13 +57,8 @@ public class SGRoutePlanService: NSObject {
         if let requestJson = Mapper().toJSONString(keyword){
             
             let urlString = getSearceURl(.Query, postStr: requestJson.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)
-            var url = NSURL()
+            let  url = NSURL(string:urlString) ?? NSURL()
             
-            if  let urlTemp  = NSURL(string:urlString){
-                
-                url = urlTemp
-            }
-
             NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: {[weak self] (data, response, error) in
                 
                 self?.responseDataProcess(data, response: response, error: error, success: { (json) in
@@ -111,13 +106,10 @@ public class SGRoutePlanService: NSObject {
         if let requestJson = Mapper().toJSONString(keyword){
             
             let urlString = getSearceURl(.Busline, postStr: requestJson.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)
-            var url = NSURL()
             
-            if  let urlTemp  = NSURL(string:urlString){
-                
-                url = urlTemp
-            }
+            let  url = NSURL(string:urlString) ?? NSURL()
             
+            //请求
             NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: {[weak self] (data, response , error) in
                 
                 self?.responseDataProcess(data, response: response, error: error, success: { (json) in
@@ -151,6 +143,49 @@ public class SGRoutePlanService: NSObject {
             fail(errorNull)
         }
         
+    }
+    
+    /**
+     驾车路线规划
+     
+     :param: key     驾车路线规划请求实体
+     
+     :param: success 请求成功闭包
+     
+     :param: fail    请求失败闭包
+     */
+    public func driveSearch(key:CarLineSearch ,success:(CarLine)->Void ,fail:(NSError)?->Void){
+        
+        if let requestJson = Mapper().toJSONString(key){
+            
+            let urlString = getSearceURl(.Search, postStr: requestJson.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)
+            
+            let  url = NSURL(string:urlString) ?? NSURL()
+            
+            NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data, response, error) in
+                
+                if (error != nil) {
+                    fail(error)
+                    
+                    return
+                }
+                
+                if data == nil || data?.length == 0 {
+                    
+                    let errorNull = NSError.init(domain: SouthgisErrorDomain, code: SouthgisErrorCode.ServerErrorNullResponse.rawValue, userInfo: ["message" : "空数据"])
+                    fail(errorNull)
+                    return
+                }
+                
+                
+            }).resume()
+
+            
+        }else{
+            
+            let errorNull = NSError.init(domain: SouthgisErrorDomain, code: SouthgisErrorCode.ServerErrorInvalidServiceType.rawValue, userInfo: ["message" : "无效服务"])
+            fail(errorNull)
+        }
     }
     
     /**
@@ -195,5 +230,7 @@ public class SGRoutePlanService: NSObject {
         return
         
     }
+    
+
 
 }

@@ -197,3 +197,45 @@ public enum SouthgisErrorCode  :Int{
    case   ServerErrorNullResponse         = 8002 // 空响应报文
    case   ServerErrorInvalidResponseData  = 8003  // 无效的响应数据
 }
+
+//MARK: 驾车路线规划类型
+/**
+ 驾车路线规划类型
+ 
+ -  FastType:                       最快路线
+ -  ShortType:                      最短路线
+ -  AvoidHightRoutType:             避开高速
+ -  WalkType:                       步行
+ 
+ */
+public enum DriveLineType :Int {
+
+    /**
+     *  @author crash         crash_wu@163.com   , 16-08-19 16:08:37
+     *
+     *  @brief  最快路线
+     */
+    case FastType = 1
+    
+    /**
+     *  @author crash         crash_wu@163.com   , 16-08-19 16:08:49
+     *
+     *  @brief  最短路线
+     */
+    case ShortType = 2
+    
+    
+    /**
+     *  @author crash         crash_wu@163.com   , 16-08-19 16:08:54
+     *
+     *  @brief  避开高速
+     */
+    case AvoidHightRoutType = 3
+    
+    /**
+     *  @author crash         crash_wu@163.com   , 16-08-19 16:08:03
+     *
+     *  @brief  步行
+     */
+    case WalkType = 4
+}

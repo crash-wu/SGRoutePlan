@@ -182,14 +182,16 @@ public class SGRouteUtils: NSObject{
             array :[TdtPOIResult],
             mapView:AGSMapView,
             pinImageName:String){
-        
+    
+        var  symbolLayer = AGSGraphicsLayer()
         //先清除图层
         mapView.removeMapLayerWithName(SGRouteStruct.POI_POPO_LAYER_NAME)
         for model in array{
             
-           let  symbolLayer = addPinToMapView(model, mapView: mapView, popoImageName: pinImageName)
-            mapView.addMapLayer(symbolLayer, withName: SGRouteStruct.POI_POPO_LAYER_NAME)
+             symbolLayer = addPinToMapView(symbolLayer, model: model, mapView: mapView, popoImageName: pinImageName)
+
         }
+        mapView.addMapLayer(symbolLayer, withName: SGRouteStruct.POI_POPO_LAYER_NAME)
     }
     
     /**
@@ -207,10 +209,12 @@ public class SGRouteUtils: NSObject{
         model:TdtPOIResult,
         mapView:AGSMapView,
         pinImageName: String){
-        
+    
+        var symbolLayer = AGSGraphicsLayer()
+    
         //先清除图层
         mapView.removeMapLayerWithName(SGRouteStruct.POI_POPO_SELECT_LAYER_NAME)
-        let  symbolLayer = addPinToMapView(model, mapView: mapView, popoImageName: pinImageName)
+          symbolLayer = addPinToMapView(symbolLayer,model: model, mapView: mapView, popoImageName: pinImageName)
         mapView.addMapLayer(symbolLayer, withName: SGRouteStruct.POI_POPO_SELECT_LAYER_NAME)
     }
     
@@ -226,11 +230,11 @@ public class SGRouteUtils: NSObject{
      :returns: AGSGraphicsLayer 图层
      */
     private  func addPinToMapView(
+        symbolLayer:AGSGraphicsLayer,
         model:TdtPOIResult,
         mapView:AGSMapView,
         popoImageName: String)->AGSGraphicsLayer{
     
-        let  symbolLayer = AGSGraphicsLayer()
         let  graphicSymbol = AGSPictureMarkerSymbol(imageNamed: popoImageName)
         
         var tempArry  = [String]()

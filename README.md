@@ -130,6 +130,17 @@
     lineColor :UIColor ,
     startImageName :String ,
     endImageName:String)
+
+    /**
+    驾车路线规划
+
+    :param: key     驾车路线规划请求实体
+
+    :param: success 请求成功闭包
+
+    :param: fail    请求失败闭包
+    */
+    public func driveSearch(key:CarLineSearch ,success:(CarLine)->Void ,fail:(NSError)?->Void)
     
 ### BusLine
     天地图公交路线实体
@@ -142,6 +153,15 @@
 
 ### BusLineSearch
     天地图公交路线请求参数
+
+### CarLineSearch
+    天地图驾车规划请求参数
+
+### CarLine 
+    天地图驾车路线实体
+
+
+
 
 ## Example
 
