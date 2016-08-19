@@ -9,7 +9,9 @@
 天地图POI搜索，公交路线搜索，驾车路线搜索,逆地址编码 等服务工具。集成了在地图上展示POI搜索结果(显示大头针)，展示公交规划路线，驾车规划路线等功能       
 
 ## Usage
-
+# import SGRoutePlan
+   import SGRoutePlan 到项目中，便可以使用该工具类
+# SGRoutePlanService 
     
 
 ## Example
