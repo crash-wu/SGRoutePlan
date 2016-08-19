@@ -43,7 +43,104 @@
     */
     public func busSearch(keyword :BusLineSearch ,success:[BusLine]->Void,fail:(NSError)?->Void)
 
+### SGRouteUtils
+    该类提供在地图上展示POI搜索结果(大头针),公交路线，驾车路线等相关功能。
+    
+    用户可以通过该类的单列对象引用该类成员方法
+    //单列    
+    public static let sharedInstance = SGRouteUtils()
 
+    /**
+    清除天地图poi搜索结果展示图层
+
+    :param: mapView 当前地图
+    */
+    public func clearPOIResultLayer(mapView: AGSMapView)
+        
+    /**
+    移除驾车路线图层或者公交路线图层
+
+    :param: mapView 地图
+    */
+    public func clearLineLayer(mapView:AGSMapView)
+
+    /**
+    清除天地图POI搜索结果高亮显示图层
+
+    :param: mapView 当前地图
+    */
+    public func clearHighlightLayer(mapView: AGSMapView)
+
+    /**
+    获取当前地图范围
+
+    :param: mapView 地图
+
+    :returns: 返回地图的左上角坐标，与右下角坐标(xmin,ymin,xmax,ymax)
+    */
+    public  func getMapBound(mapView:AGSMapView) ->String?
+
+    /**
+    在地图页面上，以大头针形式展示天地图POI搜索数据
+
+    :param: array POI搜索结果数组
+
+    :param: mapView  当前地图
+
+    :param: pinImageName 大头针图标名称
+    */
+    public func showPOIResultsLayer(
+    array :[TdtPOIResult],
+    mapView:AGSMapView,
+    pinImageName:String)
+
+    /**
+    高亮显示天地图POI搜索结果
+
+    :param: model   天地图POI搜索数据
+
+    :param: mapView 地图
+
+    :param: popoImageName 显示图标名称
+
+    :returns: 返回显示状态
+    */
+    public func showHighlightLayer(
+    model:TdtPOIResult,
+    mapView:AGSMapView,
+    pinImageName: String)
+
+    /**
+    绘制公交路线图
+
+    :param: busLine        公公交线路实体
+
+    :param: mapView        地图
+
+    :param: lineColor      线路颜色
+
+    :param: startImageName 起点图标名称
+
+    :param: endImageName   终点图标名称
+    */
+    public func drawBusLine(
+    busLine: BusLine ,
+    mapView: AGSMapView ,
+    lineColor :UIColor ,
+    startImageName :String ,
+    endImageName:String)
+    
+### BusLine
+    天地图公交路线实体
+
+### TdtPOIResult
+    天地图POI搜索结果实体
+
+### TdtPOISearchKeyword
+    天地图POI搜索请求参数
+
+### BusLineSearch
+    天地图公交路线请求参数
 
 ## Example
 
