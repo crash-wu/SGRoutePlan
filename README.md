@@ -11,6 +11,7 @@
 ## Usage
 ### import SGRoutePlan
    import SGRoutePlan 到项目中，便可以使用该工具类
+
 ### SGRoutePlanService 
     //该类提供天地图POI搜索，公交路线搜索，驾车路线搜索逆地址编码搜索等功能
     
@@ -161,6 +162,14 @@ pod "SGRoutePlan"
 ## Author
 
 吴小星, crash_wu@163.com
+
+
+### Example 
+#### 公交 搜索动图
+    [!](http://images.cnblogs.com/cnblogs_com/crash-wu/869862/o_公交.gif)
+
+#### POI 搜索动图
+    [!](http://images.cnblogs.com/cnblogs_com/crash-wu/869862/o_POI.gif)
 
 ## License
 
