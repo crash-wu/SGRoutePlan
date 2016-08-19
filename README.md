@@ -12,7 +12,38 @@
 ### import SGRoutePlan
    import SGRoutePlan 到项目中，便可以使用该工具类
 ### SGRoutePlanService 
+    //该类提供天地图POI搜索，公交路线搜索，驾车路线搜索逆地址编码搜索等功能
     
+    /// 单例
+    //你可以使用可以使用该类提供的单列对象引用太类 ,例如  SGRoutePlanService.sharedInstance
+    public static let sharedInstance = SGRoutePlanService()
+
+    /**
+    天地图POI搜索
+
+    :param: keyword POI搜索实体
+
+    :param: success 搜索成功闭包
+
+    :param: fail    搜索失败闭包
+    */
+    public func poiSearch(keyword : TdtPOISearchKeyword
+    ,success:([TdtPOIResult])->Void
+    ,fail:(NSError?)->Void)
+
+
+    /**
+    公交规划查询
+
+    :param: keyword 公交搜索实体
+
+    :param: success 搜索成功返回闭包
+
+    :param: fail    搜索失败返回闭包
+    */
+    public func busSearch(keyword :BusLineSearch ,success:[BusLine]->Void,fail:(NSError)?->Void)
+
+
 
 ## Example
 
