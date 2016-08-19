@@ -44,6 +44,17 @@
     */
     public func busSearch(keyword :BusLineSearch ,success:[BusLine]->Void,fail:(NSError)?->Void)
 
+    /**
+    驾车路线规划
+
+    :param: key     驾车路线规划请求实体
+
+    :param: success 请求成功闭包
+
+    :param: fail    请求失败闭包
+    */
+    public func driveSearch(key:CarLineSearch ,success:(CarLine)->Void ,fail:(NSError)?->Void)
+
 ### SGRouteUtils
     该类提供在地图上展示POI搜索结果(大头针),公交路线，驾车路线等相关功能。
     
@@ -131,16 +142,7 @@
     startImageName :String ,
     endImageName:String)
 
-    /**
-    驾车路线规划
 
-    :param: key     驾车路线规划请求实体
-
-    :param: success 请求成功闭包
-
-    :param: fail    请求失败闭包
-    */
-    public func driveSearch(key:CarLineSearch ,success:(CarLine)->Void ,fail:(NSError)?->Void)
     
 ### BusLine
     天地图公交路线实体
