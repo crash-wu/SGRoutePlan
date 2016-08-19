@@ -67,7 +67,7 @@ public class SGRoutePlanService: NSObject {
             NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: {[weak self] (data, response, error) in
                 
                 self?.responseDataProcess(data, response: response, error: error, success: { (json) in
-                    guard let strongSelf = self else{return }
+
                     
                         if let poiJson = json["pois"]{
                             
@@ -94,6 +94,67 @@ public class SGRoutePlanService: NSObject {
     
     }
     
+    
+    //MARK: 公交查询
+    /**
+     公交规划查询
+     
+     :param: keyword 公交搜索实体
+     
+     :param: success 搜索成功返回闭包
+     
+     :param: fail    搜索失败返回闭包
+     */
+    public func busSearch(keyword :BusLineSearch ,success:[BusLine]->Void,fail:(NSError)?->Void){
+        
+        
+        if let requestJson = Mapper().toJSONString(keyword){
+            
+            let urlString = getSearceURl(.Busline, postStr: requestJson.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)
+            var url = NSURL()
+            
+            if  let urlTemp  = NSURL(string:urlString){
+                
+                url = urlTemp
+            }
+            
+            NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: {[weak self] (data, response , error) in
+                
+                self?.responseDataProcess(data, response: response, error: error, success: { (json) in
+                    
+                        if let results = json["results"] as? [[NSObject: AnyObject]]  where results.count > 0{
+                            print("resluts:\(results)")
+                            
+                            if let linesJson = results[0]["lines"] as?[[NSObject: AnyObject]]{
+                                
+                                print("lineJson:\(linesJson)")
+                                if let lines = Mapper<BusLine>().mapArray(
+                                    linesJson){
+                                    
+                                    print("lines:\(lines)")
+                                    success(lines)
+                                    return
+                                }
+                            }
+                            
+                        }
+                    
+                        fail(nil)
+                    
+                    
+                    }, fail: { (errors) in
+                        fail(errors)
+                })
+            }).resume()
+            
+        }else{
+            
+            let errorNull = NSError.init(domain: SouthgisErrorDomain, code: SouthgisErrorCode.ServerErrorInvalidServiceType.rawValue, userInfo: ["message" : "无效服务"])
+            fail(errorNull)
+        }
+        
+    }
+    
     /**
      解析请求返回数据
      */
@@ -108,6 +169,7 @@ public class SGRoutePlanService: NSObject {
         if data == nil || data?.length == 0 {
             
             let errorNull = NSError.init(domain: SouthgisErrorDomain, code: SouthgisErrorCode.ServerErrorNullResponse.rawValue, userInfo: ["message" : "空数据"])
+            fail(errorNull)
             return
         }
         
@@ -115,19 +177,19 @@ public class SGRoutePlanService: NSObject {
 
         
         if let dataTemp = data{
-            if dataTemp is NSData{
-                do{
-                    if let  jsonTemp = try NSJSONSerialization.JSONObjectWithData(dataTemp, options: .MutableLeaves) as? [NSObject : AnyObject]{
-                        json = jsonTemp
-                        
-                        success(json)
-                        
-                        return
-                    }
-                }catch{
-                    fail(nil)
+
+            do{
+                if let  jsonTemp = try NSJSONSerialization.JSONObjectWithData(dataTemp, options: .MutableLeaves) as? [NSObject : AnyObject]{
+                    json = jsonTemp
+                    
+                    success(json)
+                    
+                    return
                 }
+            }catch{
+                fail(nil)
             }
+
         }
         
         fail(NSError.init(domain: SouthgisErrorDomain, code: SouthgisErrorCode.ServerErrorNullResponse.rawValue, userInfo: ["message" : "空数据"]))

@@ -111,28 +111,28 @@ public enum BusLineSearchType :Int {
      *
      *  @brief  较快捷
      */
-     case  SpeedyType = 0
+     case  SpeedyType = 1
     
     /**
      *  @author crash         crash_wu@163.com   , 16-08-17 14:08:49
      *
      *  @brief  少换剩
      */
-     case  LessChangeType = 1
+     case  LessChangeType = 2
     
     /**
      *  @author crash         crash_wu@163.com   , 16-08-17 14:08:55
      *
      *  @brief  少步行
      */
-     case  LessWalkType = 2
+     case  LessWalkType = 3
     
     /**
      *  @author crash         crash_wu@163.com   , 16-08-17 14:08:08
      *
      *  @brief  不坐地铁
      */
-     case  NoMetroType = 3
+     case  NoMetroType = 4
 }
 
 

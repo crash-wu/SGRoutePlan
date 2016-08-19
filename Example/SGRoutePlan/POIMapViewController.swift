@@ -15,7 +15,11 @@ class POIMapViewController: UIViewController {
     var mapView :AGSMapView!
     var searchBtn: UIButton!
     var busBtn   : UIButton!
+    //POI 搜索实体
     var poiKey = TdtPOISearchKeyword()
+    
+        /// 公交搜索实体
+    var busKey = BusLineSearch()
     
     init(){
         super.init(nibName: nil, bundle: nil)
@@ -30,7 +34,13 @@ class POIMapViewController: UIViewController {
         self.searchBtn.backgroundColor = UIColor.blueColor()
         self.searchBtn.addTarget(self, action: #selector(POIMapViewController.search(_:)), forControlEvents: .TouchUpInside)
         
-        
+        self.busBtn = UIButton(type: .Custom)
+        self.view.insertSubview(self.busBtn, aboveSubview: self.mapView)
+        self.busBtn.frame = CGRectMake(100, 0, 100, 40)
+        self.busBtn.setTitle("公交搜索", forState: .Normal)
+        self.busBtn.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        self.busBtn.backgroundColor = UIColor.blueColor()
+        self.busBtn.addTarget(self, action: #selector(POIMapViewController.busSearch(_:)), forControlEvents: .TouchUpInside)
         
         self.edgesForExtendedLayout = .None
         self.automaticallyAdjustsScrollViewInsets = false
@@ -39,8 +49,8 @@ class POIMapViewController: UIViewController {
         AGSMapUtils.sharedInstance.loadTdtTileLayer(WMTS_VECTOR_2000, view: self.mapView)
         self.mapView.zoomToGuangZhouEnvelopeOnCGCS2000()
         
-        
-        
+        //113.3714941059775,23.06889937192582
+        //113.3796739596069 ,23.10052194023985
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -58,7 +68,7 @@ class POIMapViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    //MARK: POI搜索
     @objc private func search(button:UIButton){
         
         poiKey.queryType = .POI
@@ -76,6 +86,28 @@ class POIMapViewController: UIViewController {
                 
                 print("error:\(error)")
         }
+        
+    }
+    
+    //公交搜索
+    @objc private func busSearch(button:UIButton){
+        
+        //113.3714941059775,23.06889937192582
+        //113.3796739596069 ,23.10052194023985
+        
+        busKey.startposition = "113.3714941059775,23.06889937192582"
+        busKey.endposition = "113.3796739596069 ,23.10052194023985"
+        
+        busKey.linetype = .SpeedyType
+        
+        SGRoutePlanService.sharedInstance.busSearch(busKey, success: { (lines) in
+            
+                print("lines:\(lines)")
+            
+            }) { (_) in
+                
+        }
+        
         
     }
 
