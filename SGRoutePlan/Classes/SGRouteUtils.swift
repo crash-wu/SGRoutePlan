@@ -351,6 +351,50 @@ public class SGRouteUtils: NSObject{
     
     
     /**
+     绘制公交路线图
+     
+     :param: busLine        公公交线路实体
+     
+     :param: mapView        地图
+     
+     :param: lineColor      线路颜色
+     
+     :param: startImageName 起点图标名称
+     
+     :param: endImageName   终点图标名称
+     */
+    public func drawBusLine(
+        busLine: BusLine ,
+        mapView: AGSMapView ,
+        lineColor :UIColor ,
+        startImageName :String ,
+        endImageName:String){
+        
+        var lonlat = String()
+        if  let  segments = busLine.segments{
+            
+            for segment in segments{
+                
+                if  let busSegmentLines = segment.segmentLine{
+                    
+                    for busSegmentLine in busSegmentLines{
+                        
+                        lonlat = lonlat + (busSegmentLine.linePoint ?? "")
+                    }
+                }
+                
+            }
+        }
+        //经纬度字符串转换成经纬度坐标数组
+        if   let points =  tramfortLonlatSToPoints(lonlat, mapView: mapView){
+            
+            //绘制线路
+            drawLineOnMapView(points, color: lineColor, mapView: mapView, startImageName: startImageName, endImageName: endImageName)
+        }
+        
+    }
+    
+    /**
      将坐标字符串转换成坐标数组
      
      :param: lonlats 坐标字符串
@@ -432,5 +476,7 @@ public class SGRouteUtils: NSObject{
         }
         
     }
+    
+
 
 }

@@ -1,10 +1,14 @@
 PODS:
   - ObjectMapper (1.4.0)
+  - SCMultipleTableView (0.0.6)
   - SGRoutePlan (0.1.0):
     - ObjectMapper
+  - SnapKit (0.21.1)
 
 DEPENDENCIES:
+  - SCMultipleTableView (~> 0.0.6)
   - SGRoutePlan (from `../SGRoutePlan.podspec`)
+  - SnapKit (~> 0.21.0)
 
 EXTERNAL SOURCES:
   SGRoutePlan:
@@ -12,6 +16,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   ObjectMapper: a07ad0462c5adf014adc0f89ef04c29b626e855e
+  SCMultipleTableView: 35c68507061c5747a0d4f8b855ad05e89b7489ac
   SGRoutePlan: 8aca1f1f7b5c1602b1822573078f426674c73be4
+  SnapKit: bbad04cb016c7cead63965f16b00c09318d271ee
 
 COCOAPODS: 0.39.0

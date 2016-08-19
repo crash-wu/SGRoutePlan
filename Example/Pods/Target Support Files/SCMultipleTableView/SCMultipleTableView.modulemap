@@ -1,0 +1,6 @@
+framework module SCMultipleTableView {
+  umbrella header "SCMultipleTableView-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -91,18 +91,25 @@ class POIMapViewController: UIViewController {
     
     //公交搜索
     @objc private func busSearch(button:UIButton){
-        
-        //113.3714941059775,23.06889937192582
-        //113.3796739596069 ,23.10052194023985
+
         
         busKey.startposition = "113.3714941059775,23.06889937192582"
         busKey.endposition = "113.3796739596069 ,23.10052194023985"
         
         busKey.linetype = .SpeedyType
         
-        SGRoutePlanService.sharedInstance.busSearch(busKey, success: { (lines) in
+        SGRoutePlanService.sharedInstance.busSearch(busKey, success: { [weak self](lines) in
             
-                print("lines:\(lines)")
+            
+            dispatch_async(dispatch_get_main_queue(), { 
+                guard let strongSelf = self else {return}
+                
+                let vc = BusLineResultViewController( mapView: strongSelf.mapView)
+                vc.renderLines(lines)
+                
+                self?.navigationController?.pushViewController(vc, animated: true)
+            })
+
             
             }) { (_) in
                 

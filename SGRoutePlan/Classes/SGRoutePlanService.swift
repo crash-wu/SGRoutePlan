@@ -123,15 +123,13 @@ public class SGRoutePlanService: NSObject {
                 self?.responseDataProcess(data, response: response, error: error, success: { (json) in
                     
                         if let results = json["results"] as? [[NSObject: AnyObject]]  where results.count > 0{
-                            print("resluts:\(results)")
+
                             
                             if let linesJson = results[0]["lines"] as?[[NSObject: AnyObject]]{
-                                
-                                print("lineJson:\(linesJson)")
+
                                 if let lines = Mapper<BusLine>().mapArray(
                                     linesJson){
-                                    
-                                    print("lines:\(lines)")
+
                                     success(lines)
                                     return
                                 }

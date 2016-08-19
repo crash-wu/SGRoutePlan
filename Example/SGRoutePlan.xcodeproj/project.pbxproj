@@ -13,6 +13,17 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		7614E377686DAC1E349C3E52 /* Pods_SGRoutePlan_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DCE82D40849D1F22A8F0E0 /* Pods_SGRoutePlan_Example.framework */; };
+		9831DDBF1D66A0AA0035D8F0 /* BusLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9831DDBA1D66A0AA0035D8F0 /* BusLineCell.swift */; };
+		9831DDC01D66A0AA0035D8F0 /* BusLineResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9831DDBB1D66A0AA0035D8F0 /* BusLineResultView.swift */; };
+		9831DDC11D66A0AA0035D8F0 /* BusLineResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9831DDBC1D66A0AA0035D8F0 /* BusLineResultViewController.swift */; };
+		9831DDC21D66A0AA0035D8F0 /* BusLineSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9831DDBD1D66A0AA0035D8F0 /* BusLineSectionView.swift */; };
+		9831DDC31D66A0AA0035D8F0 /* BusLineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9831DDBE1D66A0AA0035D8F0 /* BusLineViewModel.swift */; };
+		9831DDC51D66A1210035D8F0 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9831DDC41D66A1210035D8F0 /* UIColor+Ext.swift */; };
+		9831DDCA1D66AE7C0035D8F0 /* 路线规划-步行@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9831DDC71D66AE7C0035D8F0 /* 路线规划-步行@2x.png */; };
+		9831DDCB1D66AE7C0035D8F0 /* 路线规划-地铁@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9831DDC81D66AE7C0035D8F0 /* 路线规划-地铁@2x.png */; };
+		9831DDCC1D66AE7C0035D8F0 /* 路线规划-公交@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9831DDC91D66AE7C0035D8F0 /* 路线规划-公交@2x.png */; };
+		9831DDCF1D66B8FF0035D8F0 /* end_popo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9831DDCD1D66B8FF0035D8F0 /* end_popo@2x.png */; };
+		9831DDD01D66B8FF0035D8F0 /* start_popo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9831DDCE1D66B8FF0035D8F0 /* start_popo@2x.png */; };
 		988A80A31D6540FE001BDE41 /* RoutePlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988A80A21D6540FE001BDE41 /* RoutePlanViewController.swift */; };
 		988A80A91D6549E4001BDE41 /* POIMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988A80A81D6549E4001BDE41 /* POIMapViewController.swift */; };
 		988A80FF1D654DCB001BDE41 /* AGSMapUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988A80FD1D654DCB001BDE41 /* AGSMapUtils.swift */; };
@@ -65,6 +76,17 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		68BACFE452E50D691CAE9A82 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95CBD148D159D021D0996CFA /* Pods-SGRoutePlan_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGRoutePlan_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SGRoutePlan_Example/Pods-SGRoutePlan_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		9831DDBA1D66A0AA0035D8F0 /* BusLineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusLineCell.swift; sourceTree = "<group>"; };
+		9831DDBB1D66A0AA0035D8F0 /* BusLineResultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusLineResultView.swift; sourceTree = "<group>"; };
+		9831DDBC1D66A0AA0035D8F0 /* BusLineResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusLineResultViewController.swift; sourceTree = "<group>"; };
+		9831DDBD1D66A0AA0035D8F0 /* BusLineSectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusLineSectionView.swift; sourceTree = "<group>"; };
+		9831DDBE1D66A0AA0035D8F0 /* BusLineViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusLineViewModel.swift; sourceTree = "<group>"; };
+		9831DDC41D66A1210035D8F0 /* UIColor+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
+		9831DDC71D66AE7C0035D8F0 /* 路线规划-步行@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "路线规划-步行@2x.png"; sourceTree = "<group>"; };
+		9831DDC81D66AE7C0035D8F0 /* 路线规划-地铁@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "路线规划-地铁@2x.png"; sourceTree = "<group>"; };
+		9831DDC91D66AE7C0035D8F0 /* 路线规划-公交@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "路线规划-公交@2x.png"; sourceTree = "<group>"; };
+		9831DDCD1D66B8FF0035D8F0 /* end_popo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "end_popo@2x.png"; sourceTree = "<group>"; };
+		9831DDCE1D66B8FF0035D8F0 /* start_popo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "start_popo@2x.png"; sourceTree = "<group>"; };
 		988A80A21D6540FE001BDE41 /* RoutePlanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutePlanViewController.swift; sourceTree = "<group>"; };
 		988A80A81D6549E4001BDE41 /* POIMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POIMapViewController.swift; sourceTree = "<group>"; };
 		988A80FD1D654DCB001BDE41 /* AGSMapUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGSMapUtils.swift; sourceTree = "<group>"; };
@@ -161,6 +183,7 @@
 		607FACD21AFB9204008FA782 /* Example for SGRoutePlan */ = {
 			isa = PBXGroup;
 			children = (
+				9831DDC61D66A53D0035D8F0 /* Bus */,
 				98C60E641D65BD5B0084CDA4 /* list_numb_img.png */,
 				98C60E651D65BD5B0084CDA4 /* list_numb_img@2x.png */,
 				988A81B01D659050001BDE41 /* SouthgisTileLayer */,
@@ -173,6 +196,7 @@
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 				988A80A21D6540FE001BDE41 /* RoutePlanViewController.swift */,
 				988A80A81D6549E4001BDE41 /* POIMapViewController.swift */,
+				9831DDC41D66A1210035D8F0 /* UIColor+Ext.swift */,
 			);
 			name = "Example for SGRoutePlan";
 			path = SGRoutePlan;
@@ -211,6 +235,23 @@
 				1C7129B4EA5697C3391095AE /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		9831DDC61D66A53D0035D8F0 /* Bus */ = {
+			isa = PBXGroup;
+			children = (
+				9831DDCD1D66B8FF0035D8F0 /* end_popo@2x.png */,
+				9831DDCE1D66B8FF0035D8F0 /* start_popo@2x.png */,
+				9831DDC71D66AE7C0035D8F0 /* 路线规划-步行@2x.png */,
+				9831DDC81D66AE7C0035D8F0 /* 路线规划-地铁@2x.png */,
+				9831DDC91D66AE7C0035D8F0 /* 路线规划-公交@2x.png */,
+				9831DDBA1D66A0AA0035D8F0 /* BusLineCell.swift */,
+				9831DDBB1D66A0AA0035D8F0 /* BusLineResultView.swift */,
+				9831DDBC1D66A0AA0035D8F0 /* BusLineResultViewController.swift */,
+				9831DDBD1D66A0AA0035D8F0 /* BusLineSectionView.swift */,
+				9831DDBE1D66A0AA0035D8F0 /* BusLineViewModel.swift */,
+			);
+			name = Bus;
 			sourceTree = "<group>";
 		};
 		988A81B01D659050001BDE41 /* SouthgisTileLayer */ = {
@@ -405,7 +446,12 @@
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				98C60E661D65BD5B0084CDA4 /* list_numb_img.png in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				9831DDCA1D66AE7C0035D8F0 /* 路线规划-步行@2x.png in Resources */,
+				9831DDCC1D66AE7C0035D8F0 /* 路线规划-公交@2x.png in Resources */,
+				9831DDD01D66B8FF0035D8F0 /* start_popo@2x.png in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				9831DDCB1D66AE7C0035D8F0 /* 路线规划-地铁@2x.png in Resources */,
+				9831DDCF1D66B8FF0035D8F0 /* end_popo@2x.png in Resources */,
 				98C60E671D65BD5B0084CDA4 /* list_numb_img@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,7 +521,10 @@
 				988A81E11D659050001BDE41 /* Southgis_BdWMTSLayerOperation.m in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				988A80A91D6549E4001BDE41 /* POIMapViewController.swift in Sources */,
+				9831DDC21D66A0AA0035D8F0 /* BusLineSectionView.swift in Sources */,
+				9831DDC01D66A0AA0035D8F0 /* BusLineResultView.swift in Sources */,
 				988A81E01D659050001BDE41 /* Southgis_BdWMTSLayerInfoDelegate.m in Sources */,
+				9831DDC51D66A1210035D8F0 /* UIColor+Ext.swift in Sources */,
 				988A81EA1D659050001BDE41 /* SGSWMTSInfo.m in Sources */,
 				988A81E81D659050001BDE41 /* README.md in Sources */,
 				988A81E41D659050001BDE41 /* Southgis_TiledServiceLayerInfo.m in Sources */,
@@ -490,6 +539,8 @@
 				988A81EC1D659050001BDE41 /* SGSWMTSLayerInfo.m in Sources */,
 				988A81E91D659050001BDE41 /* NSDictionary+YYAdd.m in Sources */,
 				988A81EB1D659050001BDE41 /* SGSWMTSLayer.m in Sources */,
+				9831DDBF1D66A0AA0035D8F0 /* BusLineCell.swift in Sources */,
+				9831DDC11D66A0AA0035D8F0 /* BusLineResultViewController.swift in Sources */,
 				988A81F51D659050001BDE41 /* SGSTdtWMSLayer.swift in Sources */,
 				988A81F01D659050001BDE41 /* SouthgisTdt_LayerInfo.m in Sources */,
 				988A80FF1D654DCB001BDE41 /* AGSMapUtils.swift in Sources */,
@@ -497,6 +548,7 @@
 				988A81EF1D659050001BDE41 /* Southgis_WMTSLayerOperation.m in Sources */,
 				988A81F11D659050001BDE41 /* SouthgisTdt_TileLayer.m in Sources */,
 				988A81EE1D659050001BDE41 /* SouthgisTiledMapHelper.m in Sources */,
+				9831DDC31D66A0AA0035D8F0 /* BusLineViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
