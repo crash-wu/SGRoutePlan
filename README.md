@@ -10,7 +10,7 @@
 
 ## Usage
 ### import SGRoutePlan
-   import SGRoutePlan 到项目中，便可以使用该工具类
+    import SGRoutePlan 到项目中，便可以使用该工具类
 
 ### SGRoutePlanService 
     //该类提供天地图POI搜索，公交路线搜索，驾车路线搜索逆地址编码搜索等功能
