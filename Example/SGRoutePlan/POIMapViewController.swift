@@ -24,6 +24,9 @@ class POIMapViewController: UIViewController {
         /// 公交搜索实体
     var busKey = BusLineSearch()
     
+        /// 驾车搜索实体
+    var carKey = CarLineSearch()
+    
     init(){
         super.init(nibName: nil, bundle: nil)
         self.mapView = AGSMapView(frame: self.view.frame)
@@ -141,6 +144,14 @@ class POIMapViewController: UIViewController {
     
     @objc private func carSearch(button:UIButton){
         
+        carKey.orig = "113.3714941059775,23.06889937192582"
+        carKey.dest = "113.3796739596069 ,23.10052194023985"
+        carKey.style = .FastType
+        SGRoutePlanService.sharedInstance.driveSearch(carKey, success: { (line) in
+            
+            }) { (_) in
+                
+        }
     }
     
     @objc private func clear(button:UIButton){
