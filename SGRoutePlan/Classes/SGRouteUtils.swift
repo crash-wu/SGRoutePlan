@@ -47,7 +47,7 @@ public class SGRouteUtils: NSObject{
     }
     
     /**
-     清除天地图POI搜索结果高亮显示图层
+     清除天地图POI搜索结果高亮显示图层(或者 清除单个坐标点添加显示大头针图层)
      
      :param: mapView 当前地图
      */
@@ -134,7 +134,30 @@ public class SGRouteUtils: NSObject{
         
     }
     
-    
+    /**
+     给单个坐标点添加显示大头针
+     
+     :param: point     坐标点
+     :param: imageName 图形名称
+     
+     :returns:
+     */
+    public func showPinLayerToLocation(point : AGSPoint,symbolImage imageName :String ,mapView:AGSMapView){
+        
+        let symbolLayer = AGSGraphicsLayer()
+        
+        let graphicSymbol = AGSPictureMarkerSymbol(imageNamed: imageName)
+        
+        var attributes : [String :AnyObject] = [:]
+        attributes["type"] = 1
+        
+        let graphic = AGSGraphic(geometry: point, symbol: graphicSymbol, attributes: attributes)
+        
+        symbolLayer.addGraphic(graphic)
+        
+        symbolLayer.refresh()
+        mapView.addMapLayer(symbolLayer, withName: SGRouteStruct.POI_POPO_SELECT_LAYER_NAME)
+    }
     
     
     //MARK: 获取天地图POI搜索结果坐标数组
@@ -410,7 +433,7 @@ public class SGRouteUtils: NSObject{
      
      :param: endImageName   终点图标名称
      */
-    func drawDriveLine(carline: CarLine ,
+   public  func drawDriveLine(carline: CarLine ,
                        mapView: AGSMapView ,
                        lineColor :UIColor ,
                        startImageName :String ,

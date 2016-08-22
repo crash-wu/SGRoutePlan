@@ -5,12 +5,14 @@ PODS:
     - ObjectMapper
     - SWXMLHash
   - SnapKit (0.21.1)
+  - SVProgressHUD (2.0.3)
   - SWXMLHash (2.5.0)
 
 DEPENDENCIES:
   - SCMultipleTableView (~> 0.0.6)
   - SGRoutePlan (from `../SGRoutePlan.podspec`)
   - SnapKit (~> 0.21.0)
+  - SVProgressHUD (~> 2.0.3)
 
 EXTERNAL SOURCES:
   SGRoutePlan:
@@ -21,6 +23,7 @@ SPEC CHECKSUMS:
   SCMultipleTableView: 35c68507061c5747a0d4f8b855ad05e89b7489ac
   SGRoutePlan: bd9995aa195765b763a2208e50c343d6456e743b
   SnapKit: bbad04cb016c7cead63965f16b00c09318d271ee
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
   SWXMLHash: 04158642e0c90c52274db7914032edd41bed9a41
 
 COCOAPODS: 0.39.0

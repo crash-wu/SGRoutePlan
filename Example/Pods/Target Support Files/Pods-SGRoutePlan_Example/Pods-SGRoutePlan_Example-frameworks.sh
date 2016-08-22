@@ -85,6 +85,7 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-SGRoutePlan_Example/SCMultipleTableView.framework"
+  install_framework "Pods-SGRoutePlan_Example/SVProgressHUD.framework"
   install_framework "Pods-SGRoutePlan_Example/SnapKit.framework"
   install_framework "Pods-SGRoutePlan_Example/ObjectMapper.framework"
   install_framework "Pods-SGRoutePlan_Example/SGRoutePlan.framework"
@@ -92,6 +93,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-SGRoutePlan_Example/SCMultipleTableView.framework"
+  install_framework "Pods-SGRoutePlan_Example/SVProgressHUD.framework"
   install_framework "Pods-SGRoutePlan_Example/SnapKit.framework"
   install_framework "Pods-SGRoutePlan_Example/ObjectMapper.framework"
   install_framework "Pods-SGRoutePlan_Example/SGRoutePlan.framework"

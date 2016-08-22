@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,11 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+        SVProgressHUD.setDefaultMaskType(.Black)
+        SVProgressHUD.setDefaultStyle(.Dark)
+        SVProgressHUD.setMinimumDismissTimeInterval(2.0)
         
         self.window = UIWindow(frame:UIScreen.mainScreen().bounds )
         self.window?.makeKeyAndVisible()
         
-        self.window?.rootViewController = UINavigationController(rootViewController: RoutePlanViewController())
+        self.window?.rootViewController = UINavigationController(rootViewController: POIMapViewController())
         return true
     }
 

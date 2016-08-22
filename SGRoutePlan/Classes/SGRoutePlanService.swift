@@ -208,8 +208,6 @@ public class SGRoutePlanService: NSObject {
                     carMapInfor.center = xml["result"]["mapinfo"]["center"].element?.text
                     carline.mapInfo = carMapInfor
                     success(carline)
-  //                  print("carline:\(carline)")
-                    
                     
                 }else{
                     
@@ -227,6 +225,60 @@ public class SGRoutePlanService: NSObject {
             fail(errorNull)
         }
     }
+    
+    
+    //MARK: 逆地址编码
+    
+    /**
+     逆地址编码
+     
+     :param: keyword 逆地址编码请求实体
+     
+     :param: success 请求成功返回标志   
+     
+     :param: fail    请求失败返回标志
+     */
+    public func getCode(keyword: ReverseAddressSearchKeyword ,success: (ReverseAddress)->Void ,fail:(NSError)?->Void){
+        
+        if let requestJson = Mapper().toJSONString(keyword){
+            
+            let urlString = getSearceURl(.Geocode, postStr: requestJson.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)
+            
+            let  url = NSURL(string:urlString) ?? NSURL()
+            
+            NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: {[weak self] (data, response, error) in
+                
+                self?.responseDataProcess(data, response: response, error: error, success: { (json) in
+                    
+                    if let results = json["result"] as? [NSObject: AnyObject] {
+                        
+                        if  let codeModel = Mapper<ReverseAddress>().map(results){
+                            
+                            success(codeModel)
+                            return
+                        }
+                        
+                    }
+                    
+                    fail(nil)
+                    
+                    
+                    }, fail: { (errors) in
+                        fail(errors)
+                })
+                
+                
+            }).resume()
+            
+        }else{
+            
+            let errorNull = NSError.init(domain: SouthgisErrorDomain, code: SouthgisErrorCode.ServerErrorInvalidServiceType.rawValue, userInfo: ["message" : "无效服务"])
+            fail(errorNull)
+            
+        }
+        
+    }
+
     
     /**
      解析请求返回数据

@@ -19,6 +19,8 @@ public struct  SGRouteStruct {
     /*** 兴趣点点击弹出Callout名称 ****/
    public  static let POI_CALLOUT_LAYER_NAME = "poi_callout_layer_name"
     
+
+    
     /***  驾车路线图层  ****/
    public  static let CAR_LINE_LAYER_NAME = "car_line_layer_name"
     
@@ -28,8 +30,7 @@ public struct  SGRouteStruct {
     /******** 驾车路线终点图层 *********/
    public  static let CAR_LINE_DESTION_LAYER_NAME = "car_line_destion_layer_name"
     
-    /******** 当前位置 *********/
-   public static let USER_LOCTION_LAYER_NAME = "user_position_layer_name"
+ 
     
     /******** CallOut 类型 *********/
    public static let CALLOUT_TYPE = "type"
@@ -41,7 +42,7 @@ public struct  SGRouteStruct {
    public static let POI_ADDRESS = "poi_address"
     
     /******** POI 联系电话 *********/
-  public  static let POI_PHONE = "poi_phone"
+   public  static let POI_PHONE = "poi_phone"
     
     /******** POI 坐标 *********/
    public static let POI_LONLAT = "poi_lonlat"

@@ -3,6 +3,7 @@ use_frameworks!
 #pod 'ObjectMapper'
 pod 'SnapKit', '~> 0.21.0'
 pod 'SCMultipleTableView', '~>0.0.6'
+pod 'SVProgressHUD', '~> 2.0.3'
 
 target 'SGRoutePlan_Example' do
   pod 'SGRoutePlan', :path => '../SGRoutePlan.podspec'

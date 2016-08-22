@@ -55,6 +55,18 @@
     */
     public func driveSearch(key:CarLineSearch ,success:(CarLine)->Void ,fail:(NSError)?->Void)
 
+
+    /**
+    逆地址编码
+
+    :param: keyword 逆地址编码请求实体
+
+    :param: success 请求成功返回标志   
+
+    :param: fail    请求失败返回标志
+    */
+    public func getCode(keyword: ReverseAddressSearchKeyword ,success: (ReverseAddress)->Void ,fail:(NSError)?->Void)
+
 ### SGRouteUtils
     该类提供在地图上展示POI搜索结果(大头针),公交路线，驾车路线等相关功能。
     
@@ -142,6 +154,35 @@
     startImageName :String ,
     endImageName:String)
 
+    /**
+    绘制驾车路线
+
+    :param: carline        驾车路线
+    :param: mapView        地图
+
+    :param: lineColor      线路颜色
+
+    :param: startImageName 起点图标名称
+
+    :param: endImageName   终点图标名称
+    */
+    public  func drawDriveLine(carline: CarLine ,
+    mapView: AGSMapView ,
+    lineColor :UIColor ,
+    startImageName :String ,
+    endImageName:String)
+
+
+
+    /**
+    给单个坐标点添加显示大头针
+
+    :param: point     坐标点
+    :param: imageName 图形名称
+
+    :returns:
+    */
+    public func showPinLayerToLocation(point : AGSPoint,symbolImage imageName :String ,mapView:AGSMapView)
 
     
 ### BusLine
@@ -163,7 +204,11 @@
     天地图驾车路线实体
 
 
+### ReverseAddressSearchKeyword
+    逆地址编码搜索请求实体
 
+### ReverseAddress
+    逆地址搜索结果实体(依据经纬度坐标查找位置信息)
 
 ## Example
 
