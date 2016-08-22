@@ -8,6 +8,7 @@
 
 import UIKit
 import ObjectMapper
+import SWXMLHash
 
 /// 错误标准
 let SouthgisErrorDomain = "com.Southgis.TianDituFramework.Error"
@@ -176,6 +177,45 @@ public class SGRoutePlanService: NSObject {
                     fail(errorNull)
                     return
                 }
+                
+                if let xmlData = data{
+                    
+                    //解析xml
+                    let xml = SWXMLHash.parse(xmlData)
+
+                    let carline = CarLine()
+                    carline.distance = xml["result"]["distance"].element?.text
+                    carline.routelatlon = xml["result"]["routelatlon"].element?.text
+                    
+                        
+                    let carlinNodes = xml["result"]["routes"]["item"].all.flatMap({ (emle) -> CarLineNode in
+                        
+                        let nodel = CarLineNode()
+                        nodel.strguide = emle["strguide"].element?.text
+                        nodel.signage = emle["signage"].element?.text
+                        nodel.streetName = emle["streetName"].element?.text
+                        nodel.nextStreetName = emle["nextStreetName"].element?.text
+                        nodel.tollStatus = emle["tollStatus"].element?.text
+                        
+                        return nodel
+
+                    })
+                    
+                    carline.carRoutes = carlinNodes
+                    
+                    let carMapInfor = CarMapInfoNode()
+                    carMapInfor.scale = xml["result"]["mapinfo"]["scale"].element?.text
+                    carMapInfor.center = xml["result"]["mapinfo"]["center"].element?.text
+                    carline.mapInfo = carMapInfor
+                    success(carline)
+  //                  print("carline:\(carline)")
+                    
+                    
+                }else{
+                    
+                    fail(nil)
+                }
+
                 
                 
             }).resume()

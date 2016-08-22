@@ -399,6 +399,34 @@ public class SGRouteUtils: NSObject{
     }
     
     /**
+     绘制驾车路线
+     
+     :param: carline        驾车路线
+     :param: mapView        地图
+     
+     :param: lineColor      线路颜色
+     
+     :param: startImageName 起点图标名称
+     
+     :param: endImageName   终点图标名称
+     */
+    func drawDriveLine(carline: CarLine ,
+                       mapView: AGSMapView ,
+                       lineColor :UIColor ,
+                       startImageName :String ,
+                       endImageName:String){
+        
+        if let routelatlon = carline.routelatlon{
+            //经纬度字符串转换成经纬度坐标数组
+            if   let points =  tramfortLonlatSToPoints(routelatlon, mapView: mapView){
+                
+                //绘制线路
+                drawLineOnMapView(points, color: lineColor, mapView: mapView, startImageName: startImageName, endImageName: endImageName)
+            }            
+        }
+    }
+    
+    /**
      将坐标字符串转换成坐标数组
      
      :param: lonlats 坐标字符串
